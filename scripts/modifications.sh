@@ -42,5 +42,9 @@ sudo dnf install gcc clang llvm
 curl -fsSL https://install.julialang.org | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# Install packages
+sudo dnf install inkscape
+
+# Configure additional repositories
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
