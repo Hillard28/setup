@@ -1,1 +1,1 @@
-# Infinity
+# infinity
