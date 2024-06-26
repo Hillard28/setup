@@ -1,7 +1,8 @@
 %include fedora-live-workstation.ks
 
-%packages
--@libreoffice
--rhythmbox
-%end
+repo --name=irepo --baseurl=file:///home/ryangilland/Projects/irepo
 
+%packages
+gnome-control-center
+-@ LibreOffice
+%end
