@@ -31,3 +31,16 @@ sudo rpm -i --reinstall Projects/irepo/packages/gnome-control-center-46.2-1.fc40
 
 cd ~/Projects/Infinity/kickstarts/
 sudo livecd-creator --verbose --config=fedora-live-infinity.ks --fslabel=Fedora-40-Infinity-0.1.0 --cache=cache --tmpdir=tmp
+
+# Install programming languages
+sudo dnf remove unoconv
+sudo dnf remove @libreoffice
+sudo dnf remove rhythmbox
+
+sudo dnf install gcc clang llvm
+
+curl -fsSL https://install.julialang.org | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
