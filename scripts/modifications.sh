@@ -29,6 +29,8 @@ sudo createrepo Projects/irepo
 # Install modified gnome-control-center (need to add /etc/yum.repos.d/irepo.repo first)
 sudo rpm -i --reinstall Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
 
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
 sudo xdg-open /usr/lib/os-release
 
 cd ~/Projects/Infinity/kickstarts/
