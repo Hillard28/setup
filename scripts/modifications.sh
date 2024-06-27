@@ -49,9 +49,20 @@ sudo dnf install miktex
 curl -fsSL https://install.julialang.org | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh --repo gh-cli
+
+git config --global user.name "Hillard28"
+git config --global user.email "ryangilland@gmail.com"
+gh auth login
+
 # Install packages
 sudo dnf install inkscape
 
 # Configure additional repositories
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# Reload fonts
+fc-cache -vf
