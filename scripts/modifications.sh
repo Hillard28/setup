@@ -1,5 +1,5 @@
 # Create modified gnome-control-center
-dnf install rpm-build
+sudo dnf install rpm-build rpmdevtools createrepo_c
 rpmdev-setuptree
 
 cd ~/rpmbuild/
@@ -14,20 +14,22 @@ cd ~/rpmbuild/SOURCES/
 curl -LO https://download.gnome.org/sources/gnome-control-center/46/gnome-control-center-46.2.tar.xz
 
 cd ~/
-dnf builddep rpmbuild/SPECS/gnome-control-center.spec
+
+sudo xdg-open rpmbuild/SPECS/gnome-control-center.spec
+
+sudo dnf builddep rpmbuild/SPECS/gnome-control-center.spec
 rpmbuild -ba rpmbuild/SPECS/gnome-control-center.spec
 
-mkdir Projects
-cd Projects
-mkdir irepo
-cd irepo
-mkdir packages
-cd ~/
+mkdir -p Projects/irepo/packages
 
 mv ~/rpmbuild/RPMS/x86_64/gnome-control-center-46.2-1.fc40.x86_64.rpm ~/Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
 
+sudo createrepo Projects/irepo
+
 # Install modified gnome-control-center (need to add /etc/yum.repos.d/irepo.repo first)
 sudo rpm -i --reinstall Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
+
+sudo xdg-open /usr/lib/os-release
 
 cd ~/Projects/Infinity/kickstarts/
 sudo livecd-creator --verbose --config=fedora-live-infinity.ks --fslabel=Fedora-40-Infinity-0.1.0 --cache=cache --tmpdir=tmp
@@ -48,3 +50,4 @@ sudo dnf install inkscape
 # Configure additional repositories
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
