@@ -3,6 +3,9 @@ sudo dnf remove unoconv
 sudo dnf remove @libreoffice
 sudo dnf remove rhythmbox
 
+# Install partition manager
+sudo dnf install gparted
+
 # Install programming languages
 sudo dnf install gcc clang llvm
 sudo rpm --import "https://miktex.org/download/key"
