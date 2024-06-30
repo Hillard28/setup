@@ -1,33 +1,31 @@
 # Remove unwanted packages
-sudo dnf remove unoconv
-sudo dnf remove @libreoffice
-sudo dnf remove rhythmbox
+dnf remove unoconv @libreoffice rhythmbox -y
 
 # Install partition manager
-sudo dnf install gparted
+dnf install gparted -y
 
 # Install programming languages
-sudo dnf install gcc clang llvm
-sudo rpm --import "https://miktex.org/download/key"
-sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
-sudo dnf update
-sudo dnf install miktex
+dnf install gcc clang llvm -y
+rpm --import "https://miktex.org/download/key"
+curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
+dnf update -y
+dnf install miktex -y
 
 curl -fsSL https://install.julialang.org | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install RPM dev tools
-sudo dnf install rpm-build rpmdevtools createrepo_c
+dnf install rpm-build rpmdevtools createrepo_c -y
 
 # Install tweaks
-sudo dnf install dconf-editor gnome-tweaks
+dnf install dconf-editor gnome-tweaks -y
 
 # Install packages
-sudo dnf install inkscape
+dnf install inkscape -y
 
 # Configure additional repositories
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
+dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Create modified gnome-control-center
 rpmdev-setuptree
@@ -38,45 +36,45 @@ cd gnome-control-center
 git checkout f40
 cd ..
 mv ~/rpmbuild/gnome-control-center/gnome-control-center.spec ~/rpmbuild/SPECS/gnome-control-center.spec
-sudo rm -R gnome-control-center
+rm -R gnome-control-center
 
 cd ~/rpmbuild/SOURCES/
 curl -LO https://download.gnome.org/sources/gnome-control-center/46/gnome-control-center-46.2.tar.xz
 
 cd ~/
 
-sudo xdg-open rpmbuild/SPECS/gnome-control-center.spec
+xdg-open rpmbuild/SPECS/gnome-control-center.spec
 
 # AT THIS POINT, YOU NEED TO EDIT THE SPEC FILE TO REMOVE LOGO REFERENCES
 
-sudo dnf builddep rpmbuild/SPECS/gnome-control-center.spec
+dnf builddep rpmbuild/SPECS/gnome-control-center.spec
 rpmbuild -ba rpmbuild/SPECS/gnome-control-center.spec
 
 mkdir -p Projects/irepo/packages
 
 mv ~/rpmbuild/RPMS/x86_64/gnome-control-center-46.2-1.fc40.x86_64.rpm ~/Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
 
-sudo createrepo Projects/irepo
+createrepo Projects/irepo
 
 # Install modified gnome-control-center (need to add /etc/yum.repos.d/irepo.repo first)
-sudo rpm -i --reinstall Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
+rpm -i --reinstall Projects/irepo/packages/gnome-control-center-46.2-1.fc40.x86_64.rpm
 
 # Add minimize and maximize options
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
 # Edit os-release settings
-sudo xdg-open /usr/lib/os-release
+xdg-open /usr/lib/os-release
 
 # AT THIS POINT CAN EDIT LOGO PATH IN OS-RELEASE
 
 # Create live-cd
 cd ~/Projects/Infinity/kickstarts/
-sudo livecd-creator --verbose --config=fedora-live-infinity.ks --fslabel=Fedora-40-Infinity-0.1.0 --cache=cache --tmpdir=tmp
+livecd-creator --verbose --config=fedora-live-infinity.ks --fslabel=Fedora-40-Infinity-0.1.0 --cache=cache --tmpdir=tmp
 
 # Install github and login
-sudo dnf install 'dnf-command(config-manager)'
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh --repo gh-cli
+dnf install 'dnf-command(config-manager)' -y
+dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+dnf install gh --repo gh-cli -y
 
 git config --global user.name "Hillard28"
 git config --global user.email "ryangilland@gmail.com"
