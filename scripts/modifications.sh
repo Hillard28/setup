@@ -1,3 +1,7 @@
+# Configure additional repositories
+dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+dnf config-manager --enable fedora-cisco-openh264
+
 # Remove unwanted packages
 dnf remove unoconv @libreoffice rhythmbox -y
 
@@ -22,10 +26,6 @@ dnf install dconf-editor gnome-tweaks -y
 
 # Install packages
 dnf install inkscape -y
-
-# Configure additional repositories
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
-dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Create modified gnome-control-center
 rpmdev-setuptree
