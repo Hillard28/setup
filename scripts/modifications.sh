@@ -1,6 +1,6 @@
 #!/bin/bash
-# Add minimize and maximize options
-gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+# Change boot logo
+plymouth-set-default-theme -R igrt
 
 # Reload fonts
 fc-cache -vf
