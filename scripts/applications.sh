@@ -9,3 +9,6 @@ flatpak install flathub com.mattjakeman.ExtensionManager -y
 
 # Install configuration software
 dnf install dconf-editor gnome-tweaks -y
+
+# Install utilities
+dnf install openssl
