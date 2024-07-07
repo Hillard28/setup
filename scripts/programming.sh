@@ -9,6 +9,9 @@ dnf install miktex -y
 curl -fsSL https://install.julialang.org | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+. ~/.bashrc
+. ~/.bash_profile
+
 # Install RPM dev tools
 dnf install rpm-build rpmdevtools createrepo_c -y
 
