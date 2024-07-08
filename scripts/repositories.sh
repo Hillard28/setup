@@ -5,5 +5,5 @@ dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(r
 dnf config-manager --enable fedora-cisco-openh264
 dnf groupupdate core -y
 
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
