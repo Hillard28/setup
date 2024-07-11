@@ -1,0 +1,30 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/ryangilland/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/ryangilland/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
+
+# Set Adwaita theme
+export QT_WAYLAND_DECORATION=adwaita
+export QT_QPA_PLATFORMTHEME=gnome
+
+# Electron apps default to Wayland
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
