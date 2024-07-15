@@ -7,6 +7,7 @@ sudo mount --rbind /dev /mnt/root/dev
 sudo mount --rbind /proc /mnt/root/proc
 sudo mount --rbind /sys /mnt/root/sys
 sudo mount --rbind /run /mnt/root/run
+sudo mount --rbind /boot /mnt/root/boot
 sudo chroot /mnt/root /usr/bin/bash
 
 # Once chroot done
