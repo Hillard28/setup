@@ -1,11 +1,8 @@
 #!/bin/bash
-# Install programming languages
-dnf install gcc clang llvm -y
-rpm --import "https://miktex.org/download/key"
-curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
-dnf update -y
-dnf install miktex -y
+# Install development tools
+dnf install gcc clang llvm cmake -y
 
+# Install languages
 curl -fsSL https://install.julialang.org | sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -24,11 +21,8 @@ git config --global user.name "Hillard28"
 git config --global user.email "ryangilland@gmail.com"
 gh auth login
 
-# Install vscode
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-dnf check-update -y
-dnf install code -y
-
-# Install CMake
-dnf install cmake -y
+# Install MikTeX
+rpm --import "https://miktex.org/download/key"
+curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
+dnf update -y
+dnf install miktex -y
