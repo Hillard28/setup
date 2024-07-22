@@ -1,3 +1,3 @@
 #!/bin/bash
 # Install drivers using rpmfusion
-dnf install intel-media-driver
+sudo dnf install intel-media-driver
