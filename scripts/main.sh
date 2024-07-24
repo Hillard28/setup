@@ -3,7 +3,7 @@ chmod +x uninstall.sh repositories.sh multimedia.sh applications.sh programming.
 ./uninstall.sh
 ./repositories.sh
 ./multimedia.sh
-./applications.sh
-./programming.sh
 ./modifications.sh
 ./settings.sh
+./programming.sh
+./applications.sh
