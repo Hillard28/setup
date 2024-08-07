@@ -72,10 +72,10 @@ flatpak run org.onlyoffice.desktopeditors --system-title-bar
 kill $(pgrep DesktopEditors)
 
 # Install dconf editor
-sudo flatpak install flathub ca.desrt.dconf-editor
+sudo flatpak install flathub ca.desrt.dconf-editor -y
 
 # Install Gnome Tweaks
 sudo dnf install gnome-tweaks -y
 
 # Install utilities
-sudo dnf install openssl
+sudo dnf install openssl -y
