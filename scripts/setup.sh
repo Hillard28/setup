@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Move relevant files
+sudo mv home/userprofile/Pictures/Background ~/Pictures
+sudo mv home/userprofile/Pictures/Documents ~/Pictures
+sudo mv home/userprofile/Pictures/Profile ~/Pictures
+sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
+sudo mv usr/share/icons/Infinity /usr/share/icons/Infinity
+sudo mv usr/share/icons/infinity-logo.svg /usr/share/icons/infinity-logo.svg
+sudo mv usr/share/icons/infinity-logo-dark.svg /usr/share/icons/infinity-logo-dark.svg
+sudo mv usr/share/icons/infinity-logo-256.png /usr/share/icons/infinity-logo-256.png
+sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-logo-256-dark.png
+sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
+sudo mv usr/share/plymouth/themes/infinity /usr/share/plymouth/themes/infinity
+sudo mv usr/share/plymouth/themes/igrt /usr/share/plymouth/themes/igrt
+
 # Remove unwanted packages
 sudo dnf remove unoconv libreoffice* rhythmbox -y
 
@@ -54,7 +68,7 @@ sudo dnf install miktex -y
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf check-update
-sudo dnf install code # or code-insider
+sudo dnf install code -y # or code-insider
 
 # Install github and login
 sudo dnf install 'dnf-command(config-manager)' -y
