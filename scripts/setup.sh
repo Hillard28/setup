@@ -13,6 +13,7 @@ sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-log
 sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
 sudo mv usr/share/plymouth/themes/infinity /usr/share/plymouth/themes/infinity
 sudo mv usr/share/plymouth/themes/igrt /usr/share/plymouth/themes/igrt
+sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 
 # Remove unwanted packages
 sudo dnf remove unoconv libreoffice* rhythmbox -y
