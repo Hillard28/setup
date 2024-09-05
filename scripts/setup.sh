@@ -85,6 +85,8 @@ sudo dnf install openssl -y
 sudo plymouth-set-default-theme -R igrt
 
 # Reload fonts
+sudo dnf install rsms-inter-fonts -y
+sudo dnf install cascadia-code-fonts -y
 sudo fc-cache -vf
 
 # Add minimize and maximize options
