@@ -32,20 +32,6 @@ sudo dnf install @sound-and-video -y
 # Install drivers using rpmfusion
 sudo dnf install intel-media-driver
 
-# Change boot logo
-#TODO: move Plymouth files to correct location
-sudo plymouth-set-default-theme -R igrt
-
-# Reload fonts
-#TODO: move font files to correct location
-sudo fc-cache -vf
-
-# Add minimize and maximize options
-gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
-gsettings set org.gnome.login-screen logo '/usr/share/icons/infinity-logo-104-dark.png'
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
-sudo dconf update
-
 # Install development tools
 sudo dnf install gcc clang llvm cmake -y
 
@@ -94,3 +80,15 @@ sudo dnf install gnome-tweaks -y
 
 # Install utilities
 sudo dnf install openssl -y
+
+# Change boot logo
+sudo plymouth-set-default-theme -R igrt
+
+# Reload fonts
+sudo fc-cache -vf
+
+# Add minimize and maximize options
+gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+gsettings set org.gnome.login-screen logo '/usr/share/icons/infinity-logo-104-dark.png'
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+sudo dconf update
