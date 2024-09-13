@@ -78,6 +78,9 @@ sudo flatpak install flathub ca.desrt.dconf-editor -y
 # Install Gnome Tweaks
 sudo dnf install gnome-tweaks -y
 
+# Install Extension Manager
+sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
+
 # Install utilities
 sudo dnf install openssl -y
 
