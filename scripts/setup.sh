@@ -11,8 +11,8 @@ sudo mv usr/share/icons/infinity-logo-dark.svg /usr/share/icons/infinity-logo-da
 sudo mv usr/share/icons/infinity-logo-256.png /usr/share/icons/infinity-logo-256.png
 sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-logo-256-dark.png
 sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
-sudo mv usr/share/plymouth/themes/infinity /usr/share/plymouth/themes/infinity
-sudo mv usr/share/plymouth/themes/igrt /usr/share/plymouth/themes/igrt
+sudo mv /usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark_bak.png
+sudo mv usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 
 # Remove unwanted packages
@@ -91,7 +91,7 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 sudo dnf install openssl -y
 
 # Change boot logo
-sudo plymouth-set-default-theme -R igrt
+sudo plymouth-set-default-theme -R bgrt
 
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y
