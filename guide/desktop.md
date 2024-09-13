@@ -1,18 +1,18 @@
-Configuration
+Configuration:
 Gnome Tweaks
 DConf Editor
 Extension Manager
 
-Sound & Video
+Sound & Video:
 Camera
 Videos
 
-Office
+Office:
 OnlyOffice
 MikTeX
 Document Scanner
 
-Accessories
+Accessories:
 Weather
 Maps
 Contacts
