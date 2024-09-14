@@ -91,7 +91,7 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 sudo dnf install openssl -y
 
 # Change boot logo
-sudo plymouth-set-default-theme -R bgrt
+sudo plymouth-set-default-theme -R details
 
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y
