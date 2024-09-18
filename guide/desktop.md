@@ -8,6 +8,7 @@ Camera
 Videos
 
 Office:
+Microsoft Edge
 OnlyOffice
 MikTeX
 Document Scanner
