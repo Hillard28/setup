@@ -3,7 +3,7 @@ Gnome Tweaks
 DConf Editor
 Extension Manager
 
-Sound & Video:
+Multimedia:
 Camera
 Videos
 
