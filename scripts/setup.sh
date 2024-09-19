@@ -65,7 +65,7 @@ sudo dnf install code -y # or code-insider
 
 # Install github and login
 sudo dnf install 'dnf-command(config-manager)' -y
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf-3 config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install gh --repo gh-cli -y
 
 git config --global user.name "Hillard28"
@@ -74,7 +74,7 @@ gh auth login
 
 # Install Microsoft Edge
 #sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc # Duplicate from VSCode install
-sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
+sudo dnf-3 config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
 sudo dnf install microsoft-edge-stable -y
 
 # Install onlyoffice
