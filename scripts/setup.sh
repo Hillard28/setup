@@ -13,6 +13,17 @@ sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-log
 sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
 sudo mv /usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark_bak.png
 sudo mv usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
+sudo mv usr/share/plymouth/themes/angular_alt /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/hexagon /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/hexagon_2 /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/hexagon_dots /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/hexa_retro /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/red_loader /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/sphere /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/spin /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/spinner /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/spinner_alt /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/themes
 sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 
 # Remove unwanted packages
@@ -98,7 +109,8 @@ sudo dnf install gparted -y
 sudo dnf install openssl -y
 
 # Change boot logo
-sudo plymouth-set-default-theme -R details
+sudo dnf install plymouth-plugin-script -y
+sudo plymouth-set-default-theme -R hexagon_dots
 
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y
