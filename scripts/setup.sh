@@ -31,7 +31,7 @@ sudo dnf remove unoconv libreoffice* rhythmbox -y
 # Configure additional repositories
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf config-manager --enable fedora-cisco-openh264
+sudo dnf-3 config-manager --enable fedora-cisco-openh264
 sudo dnf groupupdate core -y
 
 # Install multimedia
@@ -107,10 +107,6 @@ sudo dnf install gparted -y
 # Install openSSL
 sudo dnf install openssl -y
 
-# Change boot logo
-sudo dnf install plymouth-plugin-script -y
-sudo plymouth-set-default-theme -R hexagon_dots
-
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y
 sudo dnf install cascadia-code-fonts -y
@@ -121,3 +117,8 @@ gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,m
 gsettings set org.gnome.login-screen logo '/usr/share/icons/infinity-logo-104-dark.png'
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 sudo dconf update
+
+# Change boot logo
+sudo dnf install plymouth-plugin-script -y
+sudo plymouth-set-default-theme -R details
+sudo plymouth-set-default-theme -R hexagon_dots
