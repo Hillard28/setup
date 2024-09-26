@@ -120,5 +120,3 @@ sudo dconf update
 
 # Change boot logo
 sudo dnf install plymouth-plugin-script -y
-sudo plymouth-set-default-theme -R details
-sudo plymouth-set-default-theme -R hexagon_dots
