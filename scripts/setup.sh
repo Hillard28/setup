@@ -84,11 +84,6 @@ gh auth login
 sudo dnf-3 config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
 sudo dnf install microsoft-edge-stable -y
 
-# Install onlyoffice
-sudo flatpak install flathub org.onlyoffice.desktopeditors -y
-flatpak run org.onlyoffice.desktopeditors --system-title-bar
-kill $(pgrep DesktopEditors)
-
 # Install dconf editor
 sudo flatpak install flathub ca.desrt.dconf-editor -y
 
