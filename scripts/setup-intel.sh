@@ -25,6 +25,9 @@ sudo mv usr/share/plymouth/themes/spinner_alt /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/themes
 sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 
+# Upgrade existing packages
+sudo dnf upgrade -y
+
 # Configure additional repositories
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
@@ -33,7 +36,7 @@ sudo dnf groupupdate core -y
 
 # Install multimedia
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf install @sound-and-video -y
 
 # Install drivers using rpmfusion
@@ -55,7 +58,7 @@ sudo dnf install rpm-build rpmdevtools createrepo_c -y
 # Install MikTeX
 sudo rpm --import "https://miktex.org/download/key"
 sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
-sudo dnf update -y
+sudo dnf upgrade -y
 sudo dnf install miktex -y
 
 # Install Perl packages for compiling LaTeX
