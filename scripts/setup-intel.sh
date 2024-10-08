@@ -32,7 +32,7 @@ sudo dnf upgrade -y
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf-3 config-manager --enable fedora-cisco-openh264
-sudo dnf group upgrade core -y
+sudo dnf group install core -y
 
 # Install multimedia
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
