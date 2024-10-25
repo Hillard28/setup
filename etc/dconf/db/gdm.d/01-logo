@@ -1,2 +1,2 @@
 [org/gnome/login-screen]
-logo='~/.local/share/icons/infinity-logo-104-dark.png'
+logo='/usr/share/icons/infinity-logo-104-dark.png'
