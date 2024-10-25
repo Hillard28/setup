@@ -21,11 +21,18 @@ PanelDefault=32
 PanelSizes=16,22,32,48,64,72,96,128
 
 # Directory list
-Directories=symbolic/ui,scalable/apps,48/apps,22/apps,16/apps
+Directories=symbolic/ui,scalable/actions,scalable/apps,48/apps,22/apps,16/apps
 
 [symbolic/ui]
 Context=UI
 Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable
+
+[scalable/actions]
+Context=Actions
+Size=128
 MinSize=8
 MaxSize=512
 Type=Scalable
