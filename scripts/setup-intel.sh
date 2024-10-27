@@ -4,15 +4,16 @@
 sudo mv home/userprofile/Pictures/Background ~/Pictures
 sudo mv home/userprofile/Pictures/Documents ~/Pictures
 sudo mv home/userprofile/Pictures/Profile ~/Pictures
+
 sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
+
 sudo mv usr/share/icons/Infinity /usr/share/icons/Infinity
 sudo mv usr/share/icons/infinity-logo.svg /usr/share/icons/infinity-logo.svg
 sudo mv usr/share/icons/infinity-logo-dark.svg /usr/share/icons/infinity-logo-dark.svg
 sudo mv usr/share/icons/infinity-logo-256.png /usr/share/icons/infinity-logo-256.png
 sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-logo-256-dark.png
 sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
-sudo mv /usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark_bak.png
-sudo mv usr/share/plymouth/themes/spinner/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
+
 sudo mv usr/share/plymouth/themes/angular_alt /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/hexagon /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/hexagon_2 /usr/share/plymouth/themes
@@ -22,7 +23,8 @@ sudo mv usr/share/plymouth/themes/red_loader /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/sphere /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/spin /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/spinner_alt /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/themes
+sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/
+
 sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 
 # Upgrade existing packages
