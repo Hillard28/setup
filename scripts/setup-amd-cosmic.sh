@@ -43,7 +43,7 @@ sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=Packag
 sudo dnf install @sound-and-video -y
 
 # Install development tools
-sudo dnf install gcc clang llvm cmake -y
+sudo dnf install git gcc clang llvm cmake -y
 
 # Install languages
 curl -fsSL https://install.julialang.org | sh

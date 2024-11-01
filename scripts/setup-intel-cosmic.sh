@@ -44,7 +44,7 @@ sudo dnf install @sound-and-video -y
 sudo dnf install intel-media-driver -y
 
 # Install development tools
-sudo dnf install gcc clang llvm cmake -y
+sudo dnf install git gcc clang llvm cmake -y
 
 # Install languages
 curl -fsSL https://install.julialang.org | sh
