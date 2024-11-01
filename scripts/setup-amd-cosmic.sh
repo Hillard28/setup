@@ -46,6 +46,8 @@ sudo dnf install @sound-and-video -y
 # Swap PDF viewers
 sudo dnf remove okular
 flatpak install flathub org.gnome.Papers
+sudo dnf remove nheko
+sudo dnf remove ark
 
 # Install development tools
 sudo dnf install git gcc clang llvm cmake -y

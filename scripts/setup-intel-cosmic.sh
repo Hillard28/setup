@@ -44,9 +44,11 @@ sudo dnf install @sound-and-video -y
 # Install drivers using rpmfusion
 sudo dnf install intel-media-driver -y
 
-# Swap PDF viewers
+# Swap KDE programs
 sudo dnf remove okular
 flatpak install flathub org.gnome.Papers
+sudo dnf remove nheko
+sudo dnf remove ark
 
 # Install development tools
 sudo dnf install git gcc clang llvm cmake -y
