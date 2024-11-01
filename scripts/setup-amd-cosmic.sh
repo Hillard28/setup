@@ -32,6 +32,7 @@ sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
 sudo dnf upgrade -y
 
 # Configure additional repositories
+sudo dnf install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf-3 config-manager --enable fedora-cisco-openh264
@@ -41,6 +42,10 @@ sudo dnf group install core -y
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf install @sound-and-video -y
+
+# Swap PDF viewers
+sudo dnf remove okular
+flatpak install flathub org.gnome.Papers
 
 # Install development tools
 sudo dnf install git gcc clang llvm cmake -y

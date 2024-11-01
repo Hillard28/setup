@@ -30,8 +30,9 @@ sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/
 sudo dnf upgrade -y
 
 # Configure additional repositories
+sudo dnf install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf-3 config-manager --enable fedora-cisco-openh264
 sudo dnf group install core -y
 
@@ -42,6 +43,10 @@ sudo dnf install @sound-and-video -y
 
 # Install drivers using rpmfusion
 sudo dnf install intel-media-driver -y
+
+# Swap PDF viewers
+sudo dnf remove okular
+flatpak install flathub org.gnome.Papers
 
 # Install development tools
 sudo dnf install git gcc clang llvm cmake -y

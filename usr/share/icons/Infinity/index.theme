@@ -2,7 +2,7 @@
 Name=Infinity
 Comment=The Only Two
 Example=folder
-Inherits=Adwaita
+Inherits=Adwaita,Cosmic
 
 # KDE Specific Stuff
 DisplayDepth=32
