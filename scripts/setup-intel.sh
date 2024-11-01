@@ -42,7 +42,7 @@ sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=Packag
 sudo dnf install @sound-and-video -y
 
 # Install drivers using rpmfusion
-sudo dnf install intel-media-driver
+sudo dnf install intel-media-driver -y
 
 # Install development tools
 sudo dnf install gcc clang llvm cmake -y
@@ -100,9 +100,6 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 
 # Install gparted
 sudo dnf install gparted -y
-
-# Install openSSL
-sudo dnf install openssl -y
 
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y

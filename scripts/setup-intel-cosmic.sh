@@ -7,6 +7,7 @@ sudo mv home/userprofile/Pictures/Profile ~/Pictures
 
 sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
 
+sudo mv usr/share/icons/Adwaita /usr/share/icons/Adwaita
 sudo mv usr/share/icons/Infinity /usr/share/icons/Infinity
 sudo mv usr/share/icons/infinity-logo.svg /usr/share/icons/infinity-logo.svg
 sudo mv usr/share/icons/infinity-logo-dark.svg /usr/share/icons/infinity-logo-dark.svg
@@ -40,7 +41,7 @@ sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=Packag
 sudo dnf install @sound-and-video -y
 
 # Install drivers using rpmfusion
-sudo dnf install intel-media-driver
+sudo dnf install intel-media-driver -y
 
 # Install development tools
 sudo dnf install gcc clang llvm cmake -y
@@ -89,9 +90,6 @@ sudo dnf install microsoft-edge-stable -y
 
 # Install gparted
 sudo dnf install gparted -y
-
-# Install openSSL
-sudo dnf install openssl -y
 
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y

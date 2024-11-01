@@ -98,9 +98,6 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 # Install gparted
 sudo dnf install gparted -y
 
-# Install openSSL
-sudo dnf install openssl -y
-
 # Reload fonts
 sudo dnf install rsms-inter-fonts -y
 sudo dnf install cascadia-code-fonts -y
