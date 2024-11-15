@@ -90,11 +90,6 @@ git config --global user.name "Hillard28"
 git config --global user.email "ryangilland@gmail.com"
 gh auth login
 
-# Install Microsoft Edge
-#sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc # Duplicate from VSCode install
-sudo dnf-3 config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
-sudo dnf install microsoft-edge-stable -y
-
 # Install gparted
 sudo dnf install gparted -y
 
