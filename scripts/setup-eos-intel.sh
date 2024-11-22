@@ -10,7 +10,7 @@ git config --global user.name "Ryan Gilland"
 gh auth login
 
 yay -S visual-studio-code-bin
-yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-xetex
+yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
 
 yay -S dropbox dolphin-plugins
 
