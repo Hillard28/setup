@@ -7,7 +7,7 @@
    version="1.1"
    viewBox="0 0 16.933 16.933"
    id="svg9"
-   sodipodi:docname="folder-desktop.svg"
+   sodipodi:docname="user-desktop.svg"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -105,7 +105,8 @@
          fill="url(#linearGradient1053)"
          stroke-linecap="round"
          stroke-width=".7261"
-         id="rect3" />
+         id="rect3"
+         style="fill:#78aeed;fill-opacity:1" />
       <rect
          x="-16.415"
          y="13.056"
