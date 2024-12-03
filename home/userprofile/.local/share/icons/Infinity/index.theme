@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=Infinity
-Comment=MacOSX style icon theme for linux.
+Comment=Pairs best with accent color #78aeed
 Inherits=breeze,Adwaita,hicolor
 Example=folder
 
