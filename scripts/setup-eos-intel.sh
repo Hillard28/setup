@@ -21,6 +21,7 @@ yay -S visual-studio-code-bin
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
 
 yay -S dropbox nautilus-dropbox
+yay -S slack-desktop
 yay -S libreoffice-fresh
 
 yay -S inter-font
