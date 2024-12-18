@@ -1,6 +1,14 @@
+yay -Syyu
+
+sudo mv home/userprofile/Pictures/Background ~/Pictures
+sudo mv home/userprofile/Pictures/Documents ~/Pictures
+sudo mv home/userprofile/Pictures/Profile ~/Pictures
+
+yay -S zram-generator
 
 yay -S base-devel clang llvm cmake
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl -fsSL https://install.julialang.org | sh
 . ~/.bashrc
 . ~/.bash_profile
 
@@ -12,6 +20,11 @@ gh auth login
 yay -S visual-studio-code-bin
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
 
-yay -S dropbox dolphin-plugins
+yay -S dropbox nautilus-dropbox
+yay -S libreoffice-fresh
 
 yay -S inter-font
+
+yay -S extension-manager gnome-tweaks dconf-editor
+
+gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
