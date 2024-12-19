@@ -9,6 +9,7 @@ yay -S zram-generator
 yay -S base-devel clang llvm cmake
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -fsSL https://install.julialang.org | sh
+yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
 . ~/.bashrc
 . ~/.bash_profile
 
@@ -18,9 +19,9 @@ git config --global user.name "Ryan Gilland"
 gh auth login
 
 yay -S visual-studio-code-bin
-yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
 
-yay -S dropbox nautilus-dropbox
+yay -S dropbox
+yay -S nautilus-dropbox
 yay -S slack-desktop
 yay -S libreoffice-fresh
 
