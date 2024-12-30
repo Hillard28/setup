@@ -6,7 +6,7 @@ sudo mv home/userprofile/Pictures/Profile ~/Pictures
 
 yay -S zram-generator
 
-yay -S base-devel clang llvm cmake
+yay -S base-devel clang llvm cmake openssl zlib xz tk
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -fsSL https://install.julialang.org | sh
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
