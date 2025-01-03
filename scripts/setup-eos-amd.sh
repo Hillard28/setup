@@ -33,3 +33,4 @@ yay -S extension-manager gnome-tweaks dconf-editor
 
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
+sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
