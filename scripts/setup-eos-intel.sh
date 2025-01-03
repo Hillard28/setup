@@ -20,6 +20,8 @@ gh auth login
 
 yay -S visual-studio-code-bin
 
+yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd
+
 yay -S dropbox
 yay -S nautilus-dropbox
 yay -S slack-desktop
