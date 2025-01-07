@@ -3,6 +3,7 @@ yay -Syyu
 sudo mv home/userprofile/Pictures/Background ~/Pictures
 sudo mv home/userprofile/Pictures/Documents ~/Pictures
 sudo mv home/userprofile/Pictures/Profile ~/Pictures
+sudo mv home/userprofile/.local/share/icons ~/.local/share
 
 yay -S zram-generator
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
