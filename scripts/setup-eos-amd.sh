@@ -5,11 +5,14 @@ sudo mv home/userprofile/Pictures/Documents ~/Pictures
 sudo mv home/userprofile/Pictures/Profile ~/Pictures
 
 yay -S zram-generator
+sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
+sudo sh -c "echo 'zram-size = ram * 2' >> /etc/systemd/zram-generator.conf"
+sudo sh -c "echo 'compression-algorithm = zstd' >> /etc/systemd/zram-generator.conf"
 
 yay -S base-devel clang llvm cmake openssl zlib xz tk
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -fsSL https://install.julialang.org | sh
-yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience perl-yaml-tiny perl-file-homedir
+yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir
 . ~/.bashrc
 . ~/.bash_profile
 
@@ -33,4 +36,4 @@ yay -S extension-manager gnome-tweaks dconf-editor
 
 gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
-sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+#sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
