@@ -1,4 +1,0 @@
-# Add to .bash_profile
-
-# Electron apps default to Wayland
-export ELECTRON_OZONE_PLATFORM_HINT=wayland
