@@ -1,0 +1,155 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+/* if you have it installed via NPM & a CSS loader configured */
+
+
+$fg-color: #cdd6f4;
+$bg-color: #1e1e2e;
+$mocha-sky: #89dceb;
+
+window.Bar {
+    margin: 10px;
+    margin-top: 5px;
+    background: transparent;
+    color: $fg-color;
+    font-family: 'CaskaydiaCove Nerd Font', monospace;
+    font-size: 13px;
+    >centerbox {
+        background: transparent;
+        border-radius: 16px;
+        margin: 8px;
+    }
+
+    .menu-button {
+        border-radius: 16px;
+        background: $bg-color;
+        color: $fg-color;
+    }
+
+    .toggle {
+        background: $bg-color;
+        color: $fg-color;
+        min-height: 0;
+        min-width: 0;
+        font-weight: 400;
+    }
+
+    .label-time{
+        padding:0
+    }
+
+
+    button {
+        border-radius: 16px;
+        margin: 2px;
+    }
+
+    .workspace-buttons {
+        background: #1e1e2e;
+        color: #89dceb;
+    }
+
+    .workspaces {
+        padding-left: 10px
+    }
+    .system-buttons {
+        background: $bg-color;
+        color: $fg-color;
+    }
+    .control-buttons {
+        background: $bg-color;
+        color: $fg-color;
+    }
+
+    // Workspace buttons hover (non-active)
+    .workspace-buttons:not(.active):hover {
+        background: linear-gradient(to bottom, $bg-color, #111111);  // Dark gradient
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(243, 138, 168, 0.3);  // Soft pink inner glow
+        transform: scale(1.05);  // Subtle hover scale effect
+    }
+
+    // Active workspace button
+    .active {
+        background: linear-gradient(to bottom, #2D2834, #000000);  // Darker gradient for active state
+        border: 2px solid $mocha-sky;  // Sky color as accent border
+        border-radius: 50%;  // Circular button shape
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);  // Glowing effect with white inset
+        color:  $mocha-sky;  // Light green color for text
+        font-weight: bold;  // Make text bold
+        transition: all 0.2s ease-in-out;  // Smooth transition for hover/active state changes
+    }
+
+
+    .arch-button {
+        background: $bg-color;
+        outline-color: rgba(0,0,0,0);
+        border-color: $bg-color
+    }
+
+    .bt-button{
+        margin-top:5px;
+    }
+
+    .system-buttons {
+        color: #fab387;
+    }
+
+    .internet-speed-info {
+        color: #a6e3a1;
+    }
+
+    .volume-info {
+        color: #89b4fa;
+    }
+
+    .battery-info {
+        color: #a6e3a1;
+    }
+
+    .wifi-info {
+        color: #f9e2af;
+    }
+
+    .ethernet-info {
+        color: #f9e2af;
+    }
+
+    .bluetooth-info {
+        color: #89b4fa
+    }
+
+    .power-button {
+        color: #f38ba8
+    }
+
+    .media-cover {
+        margin-right: 5px;
+    }
+
+    @keyframes glowing-border {
+        0% {
+            box-shadow: 0 0 8px $mocha-sky,
+            inset 0 -3px 5px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 15px $mocha-sky,
+            inset 0 -3px 7px rgba(255, 255, 255, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 8px $mocha-sky,
+            inset 0 -3px 5px rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    .playing {
+        background: linear-gradient(to bottom, #2D2834, #000000); /* Darker gradient for active state */
+        border: 2px solid $mocha-sky; /* Sky color as accent border */
+        color: $mocha-sky; /* Sky color for text */
+        font-weight: bold; /* Make text bold */
+        animation: glowing-border 2s infinite ease-in-out; /* Apply glowing animation */
+        transition: all 0.2s ease-in-out; /* Smooth transition for state changes */
+    }
+
+
+}
+
+
