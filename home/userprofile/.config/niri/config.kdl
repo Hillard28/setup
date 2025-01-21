@@ -280,6 +280,11 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
+    variable-refresh-rate true
+}
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
