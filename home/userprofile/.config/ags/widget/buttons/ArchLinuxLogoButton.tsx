@@ -12,23 +12,23 @@ export const ArchLinuxLogoButton = () => {
     icon = Icons.arch;
   }
 
-  function openWofi() {
+  function openfuzzel() {
     try {
       const [pkillSuccess, pkillStdout, pkillStderr, pkillStatus] =
-        GLib.spawn_command_line_sync("pkill tofi");
+        GLib.spawn_command_line_sync("pkill fuzzel");
       if (!pkillSuccess) {
         throw new Error(
           `pkill command failed with status ${pkillStatus}: ${pkillStderr}`,
         );
       }
 
-      const [wofiSuccess, wofiStdout, wofiStderr, wofiStatus] =
+      const [fuzzelSuccess, fuzzelStdout, fuzzelStderr, fuzzelStatus] =
         GLib.spawn_command_line_sync(
           "fuzzel",
         );
-      if (!wofiSuccess) {
+      if (!fuzzelSuccess) {
         throw new Error(
-          `tofi command failed with status ${wofiStatus}: ${wofiStderr}`,
+          `fuzzel command failed with status ${fuzzelStatus}: ${fuzzelStderr}`,
         );
       }
     } catch (error) {
@@ -37,7 +37,7 @@ export const ArchLinuxLogoButton = () => {
   }
   return (
     <button
-      onClicked={openWofi}
+      onClicked={openfuzzel}
       cssClasses={["workspace-buttons", "arch-button"]}
     >
       {icon ? icon : <image iconName={iconName!} />}

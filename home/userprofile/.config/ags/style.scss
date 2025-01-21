@@ -1,26 +1,27 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
 /* if you have it installed via NPM & a CSS loader configured */
 
-
+$bar-color: #11111a;
 $fg-color: #cdd6f4;
 $bg-color: #1e1e2e;
-$mocha-sky: #89dceb;
+$gnome-base: #99c1f1;
 
 window.Bar {
+    border-radius: 8px;
     margin: 10px;
     margin-top: 5px;
-    background: transparent;
+    background: $bar-color;
     color: $fg-color;
     font-family: 'Inter', monospace;
-    font-size: 13px;
+    font-size: 12px;
     >centerbox {
         background: transparent;
-        border-radius: 16px;
+        border-radius: 8px;
         margin: 8px;
     }
 
     .menu-button {
-        border-radius: 16px;
+        border-radius: 8px;
         background: $bg-color;
         color: $fg-color;
     }
@@ -39,7 +40,7 @@ window.Bar {
 
 
     button {
-        border-radius: 16px;
+        border-radius: 8px;
         margin: 2px;
     }
 
@@ -70,10 +71,10 @@ window.Bar {
     // Active workspace button
     .active {
         background: linear-gradient(to bottom, #2D2834, #000000);  // Darker gradient for active state
-        border: 2px solid $mocha-sky;  // Sky color as accent border
+        border: 2px solid $gnome-base;  // Sky color as accent border
         border-radius: 50%;  // Circular button shape
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);  // Glowing effect with white inset
-        color:  $mocha-sky;  // Light green color for text
+        color:  $gnome-base;  // Light green color for text
         font-weight: bold;  // Make text bold
         transition: all 0.2s ease-in-out;  // Smooth transition for hover/active state changes
     }
@@ -127,23 +128,23 @@ window.Bar {
 
     @keyframes glowing-border {
         0% {
-            box-shadow: 0 0 8px $mocha-sky,
+            box-shadow: 0 0 8px $gnome-base,
             inset 0 -3px 5px rgba(255, 255, 255, 0.3);
         }
         50% {
-            box-shadow: 0 0 15px $mocha-sky,
+            box-shadow: 0 0 15px $gnome-base,
             inset 0 -3px 7px rgba(255, 255, 255, 0.5);
         }
         100% {
-            box-shadow: 0 0 8px $mocha-sky,
+            box-shadow: 0 0 8px $gnome-base,
             inset 0 -3px 5px rgba(255, 255, 255, 0.3);
         }
     }
 
     .playing {
         background: linear-gradient(to bottom, #2D2834, #000000); /* Darker gradient for active state */
-        border: 2px solid $mocha-sky; /* Sky color as accent border */
-        color: $mocha-sky; /* Sky color for text */
+        border: 2px solid $gnome-base; /* Sky color as accent border */
+        color: $gnome-base; /* Sky color for text */
         font-weight: bold; /* Make text bold */
         animation: glowing-border 2s infinite ease-in-out; /* Apply glowing animation */
         transition: all 0.2s ease-in-out; /* Smooth transition for state changes */
