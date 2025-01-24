@@ -65,7 +65,7 @@ function TrayItem({ item }: { item: AstalTray.TrayItem }) {
 
 export const SystemTray = () => {
     return (
-        <box spacing={12}>
+        <box>
             {bind(tray, "items").as((items) => {
                 return items
                     .toSorted((a, b) => a.title.localeCompare(b.title))
