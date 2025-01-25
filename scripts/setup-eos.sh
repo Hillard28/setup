@@ -56,9 +56,9 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 #sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 yay -S niri
-yay -S libastal-io-git libastal-git aylurs-gtk-shell-git
+yay -S libastal-meta aylurs-gtk-shell-git
 yay -S swww
 
-sudo sh -c "echo '--enable-features=UseOzonePlatform' > ~/.config/electron-flags.conf"
-sudo sh -c "echo '--ozone-platform=wayland' >> ~/.config/electron-flags.conf"
+sudo sh -c "echo '--enable-features=WaylandWindowDecorations' > ~/.config/electron-flags.conf"
+sudo sh -c "echo '--ozone-platform-hint=auto' >> ~/.config/electron-flags.conf"
 
