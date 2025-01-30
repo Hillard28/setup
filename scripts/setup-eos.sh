@@ -37,6 +37,11 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
 echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 
+# After restarting terminal, run
+# pyenv install 3.12
+# pyenv install 3.13
+# pyenv global 3.13
+
 # Install TeX Live packages 
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir
 
