@@ -9,7 +9,9 @@ sudo mv home/userprofile/.local/share/icons ~/.local/share
 
 # Install Inter and Segoe UI font packages
 yay -S inter-font
+yay -S ttf-cascadia-code-nerd
 sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
+fc-cache -fv
 
 # Install and configure ZRAM package
 yay -S zram-generator
