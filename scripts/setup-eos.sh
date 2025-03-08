@@ -1,19 +1,16 @@
-# Get script directory
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
 # Update installed packages
 yay -Syyu
 
 # Copy background, profile, and icon folders
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+sudo mv home/userprofile/Pictures/Background ~/Pictures
+sudo mv home/userprofile/Pictures/Documents ~/Pictures
+sudo mv home/userprofile/Pictures/Profile ~/Pictures
+sudo mv home/userprofile/.local/share/icons ~/.local/share
 
 # Install Inter and Segoe UI font packages
 yay -S inter-font
 yay -S nerd-fonts
-sudo mv $SCRIPT_DIR/../usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
+sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
 fc-cache -fv
 
 # Install and configure ZRAM package
@@ -29,23 +26,6 @@ curl -fsSL https://install.julialang.org | sh
 . ~/.bashrc
 . ~/.bash_profile
 . ~/.profile
-
-# Install Pyenv
-curl -fsSL https://pyenv.run | bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(pyenv init - bash)"' >> ~/.bash_profile
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-echo 'eval "$(pyenv init - bash)"' >> ~/.profile
-
-# After restarting terminal, run
-# pyenv install 3.12
-# pyenv install 3.13
-# pyenv global 3.13
 
 # Install Stata requirements
 yay -S gtk2 ncurses5-compat-libs
