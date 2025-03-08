@@ -78,9 +78,8 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Astal, AGS, and SWWW packages
-yay -S niri
+yay -S niri fuzzel swww
 yay -S libastal-meta aylurs-gtk-shell-git
-yay -S swww
 
 # Add flags for Electron-native packages to use Wayland
 echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
