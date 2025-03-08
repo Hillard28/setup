@@ -47,6 +47,9 @@ echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 # pyenv install 3.13
 # pyenv global 3.13
 
+# Install Stata requirements
+yay -S gtk2 ncurses5-compat-libs
+
 # Install TeX Live packages 
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir
 
@@ -63,7 +66,7 @@ yay -S visual-studio-code-bin
 yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd
 
 # Install workspace packages
-yay -S dropbox nautilus-dropbox slack-desktop libreoffice-fresh
+yay -S python-gpgme dropbox nautilus-dropbox slack-desktop libreoffice-fresh
 yay -S 
 yay -S 
 yay -S 
@@ -71,9 +74,9 @@ yay -S
 # Install configuration packages
 yay -S extension-manager gnome-tweaks dconf-editor
 
-#gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+# gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
-#sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
+# sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Astal, AGS, and SWWW packages
 yay -S niri
@@ -81,6 +84,6 @@ yay -S libastal-meta aylurs-gtk-shell-git
 yay -S swww
 
 # Add flags for Electron-native packages to use Wayland
-sudo sh -c "echo '--enable-features=WaylandWindowDecorations' > ~/.config/electron-flags.conf"
-sudo sh -c "echo '--ozone-platform-hint=auto' >> ~/.config/electron-flags.conf"
+echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
+echo "--ozone-platform-hint=auto" >> ~/.config/electron-flags.conf
 
