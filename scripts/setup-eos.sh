@@ -1,17 +1,19 @@
+# Get script directory
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 # Update installed packages
 yay -Syyu
 
 # Copy background, profile, and icon folders
-sudo mv home/userprofile/Pictures/Background ~/Pictures
-sudo mv home/userprofile/Pictures/Documents ~/Pictures
-sudo mv home/userprofile/Pictures/Profile ~/Pictures
-sudo mv home/userprofile/.local/share/icons ~/.local/share
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 
 # Install Inter and Segoe UI font packages
 yay -S inter-font
-yay -S ttf-cascadia-code-nerd
-yay -S ttf-jetbrains-mono-nerd
-sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
+yay -S ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd
+sudo mv $SCRIPT_DIR/../usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
 fc-cache -fv
 
 # Install and configure ZRAM package
