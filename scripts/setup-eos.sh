@@ -11,8 +11,7 @@ sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
 sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 
 # Install Inter and Segoe UI font packages
-yay -S inter-font
-yay -S nerd-fonts
+yay -S inter-font nerd-fonts
 sudo mv $SCRIPT_DIR/../usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
 fc-cache -fv
 
@@ -74,7 +73,7 @@ yay -S
 yay -S extension-manager gnome-tweaks dconf-editor
 
 # gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
-sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
+# sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Hyprland, Astal, AGS, and SWWW packages
@@ -83,5 +82,5 @@ yay -S libastal-meta aylurs-gtk-shell-git
 yay -S hyprland ags-hyprpanel-git fuzzel swww
 
 # Add flags for Electron-native packages to use Wayland
-echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
-echo "--ozone-platform-hint=auto" >> ~/.config/electron-flags.conf
+# echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
+# echo "--ozone-platform-hint=auto" >> ~/.config/electron-flags.conf
