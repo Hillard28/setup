@@ -77,9 +77,10 @@ yay -S extension-manager gnome-tweaks dconf-editor
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
-# Install niri, Astal, AGS, and SWWW packages
-yay -S niri fuzzel swww
+# Install niri, Hyprland, Astal, AGS, and SWWW packages
+# yay -S niri fuzzel swww
 yay -S libastal-meta aylurs-gtk-shell-git
+yay -S hyprland ags-hyprpanel-git fuzzel swww
 
 # Add flags for Electron-native packages to use Wayland
 echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
