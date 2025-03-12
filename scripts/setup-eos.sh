@@ -29,6 +29,8 @@ curl -fsSL https://install.julialang.org | sh
 . ~/.bash_profile
 . ~/.profile
 
+yay -S execstack
+
 # Install Pyenv
 curl -fsSL https://pyenv.run | bash
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
@@ -64,10 +66,8 @@ yay -S visual-studio-code-bin
 yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd
 
 # Install workspace packages
-yay -S python-gpgme dropbox nautilus-dropbox slack-desktop libreoffice-fresh
-yay -S 
-yay -S 
-yay -S 
+yay -S python-gpgme dropbox slack-desktop libreoffice-fresh
+yay -S nautilus-dropbox
 
 # Install configuration packages
 yay -S extension-manager gnome-tweaks dconf-editor
@@ -80,6 +80,9 @@ yay -S extension-manager gnome-tweaks dconf-editor
 # yay -S niri fuzzel swww
 yay -S libastal-meta aylurs-gtk-shell-git
 yay -S hyprland ags-hyprpanel-git fuzzel swww
+sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
+sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
+sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
 
 # Add flags for Electron-native packages to use Wayland
 # echo "--enable-features=WaylandWindowDecorations" > ~/.config/electron-flags.conf
