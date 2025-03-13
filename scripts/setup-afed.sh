@@ -25,8 +25,6 @@ sudo mv usr/share/plymouth/themes/spin /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/spinner_alt /usr/share/plymouth/themes
 sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/themes
 
-sudo mv etc/dconf/db/gdm.d/01-logo /etc/dconf/db/gdm.d/01-logo
-
 # Upgrade existing packages
 sudo dnf upgrade -y
 
