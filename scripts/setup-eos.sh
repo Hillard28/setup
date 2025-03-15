@@ -5,7 +5,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 yay -Syyu --noconfirm
 
 # Install missing gnome packages
-yay -Sgq gnome | grep -v evince | yay -S - --needed --noconfirm
+yay -S gnome --needed --noconfirm
 yay -S papers --needed --noconfirm
 
 # Copy background, profile, and icon folders
@@ -87,4 +87,16 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
 sudo mv $SCRIPT_DIR/../home/userprofile/.config/paperwm ~/.config
+
+# Hide applications
+sudo mv /usr/share/applications/avahi-discover.desktop /usr/share/applications/avahi-discover.desktop.bak
+sudo mv /usr/share/applications/bssh.desktop /usr/share/applications/bssh.desktop.bak
+sudo mv /usr/share/applications/bvnc.desktop /usr/share/applications/bvnc.desktop.bak
+sudo mv /usr/share/applications/qv4l2.desktop /usr/share/applications/qv4l2.desktop.bak
+sudo mv /usr/share/applications/qvidcap.desktop /usr/share/applications/qvidcap.desktop.bak
+sudo mv /usr/share/applications/stoken-gui.desktop /usr/share/applications/stoken-gui.desktop.bak
+sudo mv /usr/share/applications/stoken-gui-small.desktop /usr/share/applications/stoken-gui-small.desktop.bak
+sudo mv /usr/share/applications/xdvi.desktop /usr/share/applications/xdvi.desktop.bak
+sudo mv /usr/share/applications/org.pulseaudio.pavucontrol.desktop /usr/share/applications/org.pulseaudio.pavucontrol.desktop.bak
+sudo mv /usr/share/applications/gnome-nettool.desktop /usr/share/applications/gnome-nettool.desktop.bak
 
