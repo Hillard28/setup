@@ -108,4 +108,5 @@ sudo mv /usr/share/applications/xterm.desktop /usr/share/applications/xterm.desk
 sudo mv /usr/share/applications/cmake-gui.desktop /usr/share/applications/cmake-gui.desktop.bak
 sudo mv /usr/share/applications/org.gnome.Usage.desktop /usr/share/applications/org.gnome.Usage.desktop.bak
 sudo mv /usr/share/applications/org.gnome.PowerStats.desktop /usr/share/applications/org.gnome.PowerStats.desktop.bak
+sudo mv /usr/share/applications/org.gnome.Evince.desktop /usr/share/applications/org.gnome.Evince.desktop.bak
 
