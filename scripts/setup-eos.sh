@@ -99,4 +99,10 @@ sudo mv /usr/share/applications/stoken-gui-small.desktop /usr/share/applications
 sudo mv /usr/share/applications/xdvi.desktop /usr/share/applications/xdvi.desktop.bak
 sudo mv /usr/share/applications/org.pulseaudio.pavucontrol.desktop /usr/share/applications/org.pulseaudio.pavucontrol.desktop.bak
 sudo mv /usr/share/applications/gnome-nettool.desktop /usr/share/applications/gnome-nettool.desktop.bak
+sudo mv /usr/share/applications/yad-settings.desktop /usr/share/applications/yad-settings.desktop.bak
+sudo mv /usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop.bak
+sudo mv /usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop.bak
+sudo mv /usr/share/applications/cmake-gui.desktop /usr/share/applications/cmake-gui.desktop.bak
+sudo mv /usr/share/applications/org.gnome.Usage.desktop /usr/share/applications/org.gnome.Usage.desktop.bak
+sudo mv /usr/share/applications/org.gnome.PowerStats.desktop /usr/share/applications/org.gnome.PowerStats.desktop.bak
 
