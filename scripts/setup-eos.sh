@@ -13,6 +13,9 @@ sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
 sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
 sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
 sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
+gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 
 # Install Inter and Segoe UI font packages
 sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share

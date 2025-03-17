@@ -1,7 +1,7 @@
 [Icon Theme]
-Name=Infinity
+Name=Reversal
 Comment=MacOSX style icon theme for linux.
-Inherits=Reversal,Adwaita,hicolor
+Inherits=Adwaita,hicolor
 Example=folder
 
 # KDE/Plasma Stuff
@@ -57,4 +57,3 @@ Context=Applications
 MinSize=16
 MaxSize=512
 Type=Scalable
-
