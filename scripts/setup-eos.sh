@@ -18,11 +18,10 @@ gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
 gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 
 # Install Inter and Segoe UI font packages
-sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
-yay -S inter-font --needed --noconfirm
+# sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts
-yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono
-fc-cache -f
+# yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono
+# fc-cache -f
 
 # Install and configure ZRAM package
 yay -S zram-generator --needed --noconfirm
@@ -81,7 +80,6 @@ yay -S visual-studio-code-bin --needed --noconfirm
 yay -S github-cli --needed --noconfirm
 git config --global user.email "ryangilland@gmail.com"
 git config --global user.name "Ryan Gilland"
-gh auth login
 
 # gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
@@ -114,4 +112,7 @@ sudo mv /usr/share/applications/cmake-gui.desktop /usr/share/applications/cmake-
 sudo mv /usr/share/applications/org.gnome.Usage.desktop /usr/share/applications/org.gnome.Usage.desktop.bak
 sudo mv /usr/share/applications/org.gnome.PowerStats.desktop /usr/share/applications/org.gnome.PowerStats.desktop.bak
 sudo mv /usr/share/applications/org.gnome.Evince.desktop /usr/share/applications/org.gnome.Evince.desktop.bak
+
+# Configure GitHub CLI
+gh auth login
 
