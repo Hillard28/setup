@@ -1,8 +1,5 @@
-Configuration:
-Gnome Tweaks
-DConf Editor
-Extension Manager
-Extensions
+Office:
+LibreOffice
 
 Accessories:
 Calendar
@@ -15,30 +12,34 @@ Web
 Connections
 Fonts
 Characters
+Software
 
 Media:
-Document Viewer
+Papers
 Image Viewer
+Spotify
+Inkscape
 Videos
+Audio Player
 Music
 Camera
+Document Viewer
 Volume Control
-
-Office:
-LibreOffice
 
 Workspace:
 Dropbox
 Slack
 
+Configuration:
+Gnome Tweaks
+DConf Editor
+Extension Manager
+Extensions
+
 Utilities:
-File Roller
 Disks
-Usage
 Disk Usage Analyzer
-Power Statistics
 Document Scanner
-Logs
 [Remaining]
 
 EndeavourOS:
@@ -50,6 +51,7 @@ EndeavourOS log tool
 EndeavourOS Quickstart Installer
 
 Help:
+Logs
 Help
 Tour
 Parental Controls
