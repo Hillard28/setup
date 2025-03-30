@@ -1,0 +1,13 @@
+Gnome:
+Blue 1:
+rgba(153, 193, 241, 1.0)
+#99C1F1 FF
+Interface Dark 1:
+rgba(40, 40, 44, 1.0)
+#28282C FF
+Interface Dark 2:
+rgba(29, 29, 32, 1.0)
+#1D1D20 FF
+Interface Dark 3:
+rgba(34, 34, 38, 1.0)
+#222226 FF
