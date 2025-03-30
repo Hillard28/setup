@@ -85,10 +85,13 @@ git config --global user.name "Ryan Gilland"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
-# Install niri, Hyprland, Astal, AGS, and SWWW packages
-# yay -S niri fuzzel swww
-# yay -S libastal-meta aylurs-gtk-shell-git
-# yay -S hyprland ags-hyprpanel-git fuzzel swww
+# Install niri, Hyprland, Astal, AGS, SWWW, and utility packages
+yay -S brightnessctl --noconfirm
+# yay -S niri fuzzel swww --noconfirm
+# yay -S libastal-meta aylurs-gtk-shell-git --noconfirm
+# yay -S hyprland ags-hyprpanel-git fuzzel swww --noconfirm
+# sudo mv $SCRIPT_DIR/../home/userprofile/.config/ags ~/.config
+# sudo mv $SCRIPT_DIR/../home/userprofile/.config/themes ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
