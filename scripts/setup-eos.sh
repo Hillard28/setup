@@ -86,8 +86,8 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Hyprland, Astal, AGS, SWWW, and utility packages
-yay -S uwsm --noconfirm
-yay -S brightnessctl --noconfirm
+# yay -S uwsm --noconfirm
+# yay -S brightnessctl --noconfirm
 # yay -S niri fuzzel swww --noconfirm
 # yay -S libastal-meta aylurs-gtk-shell-git --noconfirm
 # yay -S hyprland hyprlock fuzzel swww --noconfirm
