@@ -8,6 +8,7 @@ import MediaPlayers from "./MediaPlayers";
 import NotificationHistory from "./NotificationHistory";
 import NetworkControls from "./NetworkControls";
 import BluetoothControls from "./BluetoothControls";
+import LookAndFeelControls from "./LookAndFeelControls";
 import {Bar, MenuPosition, menuPosition, selectedBar} from "../bar/Bar";
 
 export const SystemMenuWindowName = "systemMenuWindow"
@@ -78,6 +79,7 @@ export default function () {
                             defaultEndpoint={audio.default_microphone}
                             endpointsBinding={bind(audio, "microphones")}
                             getIcon={getMicrophoneIcon}/>
+                        <LookAndFeelControls/>
                         {/*MediaPlayersAstal uses the astal mpris component.  It causes UI jank.  Until it gets fix
                         use MediaPlayers.  It uses a home-made mpris component that doesn't cause the jank.*/}
                         {/*<MediaPlayersAstal/>*/}

@@ -67,7 +67,7 @@ function setTheme(theme: string) {
         return
     }
     buttonsEnabled = false
-    execAsync(`~/.config/ags/themes/setTheme.sh ${theme}`)
+    execAsync(`~/.config/themes/setTheme.sh ${theme}`)
         .finally(() => {
             buttonsEnabled = true
         })
@@ -87,7 +87,7 @@ function chunkIntoColumns<T>(arr: T[], numCols: number): T[][] {
 }
 
 function updateFiles() {
-    execAsync(["bash", "-c", `ls ~/.config/ags/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper`])
+    execAsync(["bash", "-c", `ls ~/.config/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper`])
         .catch((error) => {
             print(error)
         })
@@ -108,7 +108,7 @@ function updateFiles() {
 }
 
 function setWallpaper(path: string) {
-    execAsync(["bash", "-c", `~/.config/ags/themes/setWallpaper.sh ${path}`])
+    execAsync(["bash", "-c", `~/.config/themes/setWallpaper.sh ${path}`])
         .catch((error) => {
             print(error)
         })
@@ -304,7 +304,7 @@ function WallpaperColumn(
                 return null
             }
             return filesList[column].map((file) => {
-                const path = `~/.config/ags/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper/${file}`
+                const path = `~/.config/themes/${ThemeDetails[selectedTheme.get()].name}/wallpaper/${file}`
                 // 140x70 is a magic number that scales well and doesn't cause unwanted expansion of the scroll window
                 const texture = createScaledTexture(140, 70, path)
 
@@ -326,6 +326,19 @@ function WallpaperColumn(
 }
 
 export default function () {
+    selectedTheme.set(getThemeFromName(readFile("./themeName")) ?? Theme.VARDA)
+    monitorFile("./themeName", () => {
+        const newTheme = getThemeFromName(readFile("./themeName"))
+        if (newTheme !== null) {
+            selectedTheme.set(newTheme)
+        }
+    })
+
+    updateFiles()
+    selectedTheme.subscribe(() => {
+        updateFiles()
+    })
+
     const wallpaperChooserRevealed = Variable(false)
 
     setTimeout(() => {
@@ -382,10 +395,22 @@ export default function () {
             transitionType={Gtk.RevealerTransitionType.SLIDE_DOWN}>
             <box
                 vertical={true}>
+                <ThemeOptions/>
+                <Divider
+                    marginStart={20}
+                    marginEnd={20}
+                    marginTop={10}
+                    marginBottom={10}/>
                 <BarPositionOptions/>
                 <box marginTop={10}/>
                 <BarWidgetOptions2/>
                 <box marginTop={10}/>
+                <box
+                    vertical={false}>
+                    {Array.from({length: numberOfColumns}).map((_, index) => {
+                        return <WallpaperColumn column={index}/>
+                    })}
+                </box>
             </box>
         </revealer>
     </box>
