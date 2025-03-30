@@ -90,7 +90,7 @@ yay -S uwsm --noconfirm
 yay -S brightnessctl --noconfirm
 # yay -S niri fuzzel swww --noconfirm
 # yay -S libastal-meta aylurs-gtk-shell-git --noconfirm
-# yay -S hyprland ags-hyprpanel-git fuzzel swww --noconfirm
+# yay -S hyprland hyprlock fuzzel swww --noconfirm
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/ags ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/themes ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
