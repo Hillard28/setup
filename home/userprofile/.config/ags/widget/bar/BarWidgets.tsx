@@ -185,6 +185,9 @@ export function BatteryButton() {
             }
         })}
         label={batteryVar(() => getBatteryIcon(battery))}
+        tooltipText={batteryVar((value) => {
+          return `${100 * value[0]}%`;
+        })}
         visible={bind(battery, "isBattery")}/>
 }
 
