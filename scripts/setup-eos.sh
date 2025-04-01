@@ -21,7 +21,7 @@ gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts --noconfirm
 yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
-# fc-cache -f
+fc-cache -f
 
 # Install and configure ZRAM package
 yay -S zram-generator --needed --noconfirm
