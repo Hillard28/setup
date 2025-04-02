@@ -90,7 +90,7 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # yay -S brightnessctl --noconfirm
 # yay -S niri fuzzel swww --noconfirm
 # yay -S libastal-meta aylurs-gtk-shell-git --noconfirm
-# yay -S hyprland hyprlock fuzzel swww --noconfirm
+# yay -S hyprland hyprlock fuzzel swww grim slurp --noconfirm
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/ags ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/themes ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
