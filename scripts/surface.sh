@@ -1,10 +1,10 @@
 # Install linux-surface kernel immediately after installing fedora
 sudo chroot /mnt/sysimage
-dnf config-manager --add-repo=https://pkg.surfacelinux.com/fedora/linux-surface.repo
-dnf --disablerepo=updates install --allowerasing kernel-surface iptsd libwacom-surface -y
+sudo dnf config-manager addrepo --from-repofile=https://pkg.surfacelinux.com/fedora/linux-surface.repo
+sudo dnf --disablerepo=updates install --allowerasing kernel-surface iptsd libwacom-surface -y
 
 # At the moment only works with Grub
-dnf install surface-secureboot -y
+sudo dnf install surface-secureboot
 
 # After first boot in fedora
-dnf config-manager --add-repo=https://pkg.surfacelinux.com/fedora/linux-surface.repo
+sudo dnf config-manager addrepo --from-repofile=https://pkg.surfacelinux.com/fedora/linux-surface.repo
