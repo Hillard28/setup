@@ -1,43 +1,33 @@
 #!/bin/bash
 
-# Move relevant files
-sudo mv home/userprofile/Pictures/Background ~/Pictures
-sudo mv home/userprofile/Pictures/Documents ~/Pictures
-sudo mv home/userprofile/Pictures/Profile ~/Pictures
+# Get script directory
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-sudo mv usr/share/fonts/segoe-ui-fonts /usr/share/fonts/segoe-ui-fonts
-
-sudo mv usr/share/icons/Infinity /usr/share/icons/Infinity
-sudo mv usr/share/icons/infinity-logo.svg /usr/share/icons/infinity-logo.svg
-sudo mv usr/share/icons/infinity-logo-dark.svg /usr/share/icons/infinity-logo-dark.svg
-sudo mv usr/share/icons/infinity-logo-256.png /usr/share/icons/infinity-logo-256.png
-sudo mv usr/share/icons/infinity-logo-256-dark.png /usr/share/icons/infinity-logo-256-dark.png
-sudo mv usr/share/icons/infinity-logo-104-dark.png /usr/share/icons/infinity-logo-104-dark.png
-
-sudo mv usr/share/plymouth/themes/angular_alt /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/hexagon /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/hexagon_2 /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/hexagon_dots /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/hexa_retro /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/red_loader /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/sphere /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/spin /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/spinner_alt /usr/share/plymouth/themes
-sudo mv usr/share/plymouth/themes/splash /usr/share/plymouth/themes
+# Copy background, profile, and icon folders
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
+gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 
 # Upgrade existing packages
 sudo dnf upgrade -y
 
 # Configure additional repositories
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf-3 config-manager --enable fedora-cisco-openh264
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 sudo dnf group install core -y
 
 # Install multimedia
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 sudo dnf upgrade @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf install @sound-and-video -y
+
+# Install drivers using rpmfusion
+sudo dnf install intel-media-driver -y
 
 # Install development tools
 sudo dnf install gcc clang llvm cmake -y
@@ -49,21 +39,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 . ~/.bashrc
 . ~/.bash_profile
 
-# Install RPM dev tools
-sudo dnf install rpm-build rpmdevtools createrepo_c -y
-
-# Install MikTeX
-sudo rpm --import "https://miktex.org/download/key"
-sudo curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/fedora/40/miktex.repo
-sudo dnf upgrade -y
-sudo dnf install miktex -y
-
-# Install Perl packages for compiling LaTeX
-sudo dnf install 'perl(File::Copy)' -y
-sudo dnf install 'perl(Time::HiRes)' -y
-sudo dnf install 'perl(Unicode::Normalize)' -y
-sudo dnf install 'perl(sigtrap)' -y
-
 # Visual Studio Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
@@ -72,7 +47,7 @@ sudo dnf install code -y # or code-insider
 
 # Install github and login
 sudo dnf install 'dnf-command(config-manager)' -y
-sudo dnf-3 config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install gh --repo gh-cli -y
 
 git config --global user.name "Hillard28"
@@ -90,18 +65,3 @@ sudo flatpak install flathub com.mattjakeman.ExtensionManager -y
 
 # Install gparted
 sudo dnf install gparted -y
-
-# Reload fonts
-sudo dnf install rsms-inter-fonts -y
-sudo dnf install cascadia-code-fonts -y
-sudo fc-cache -vf
-
-# Add minimize and maximize options
-gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
-gsettings set org.gnome.login-screen logo '/usr/share/icons/infinity-logo-104-dark.png'
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
-sudo dconf update
-
-# Change boot logo
-sudo dnf install plymouth-plugin-script -y
-
