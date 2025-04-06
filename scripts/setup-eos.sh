@@ -1,21 +1,20 @@
 # Get script directory
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Copy background, profile, and icon folders
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
+sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity
+gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
+gtk-update-icon-cache --force ~/.local/share/icons/Reversal
+
 # Update installed packages
 yay -Syyu --noconfirm
 
 # Install missing gnome packages
 yay -S gnome --needed --noconfirm
 yay -S papers --needed --noconfirm
-
-# Copy background, profile, and icon folders
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
-gtk-update-icon-cache --force ~/.local/share/icons/Infinity
-gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
-gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 
 # Install Nerd and Segoe UI fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
@@ -119,4 +118,3 @@ sudo mv /usr/share/applications/org.gnome.Evince.desktop /usr/share/applications
 
 # Configure GitHub CLI
 gh auth login
-
