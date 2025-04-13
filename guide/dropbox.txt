@@ -1,0 +1,3 @@
+# Prevent automatic updates
+sudo rm -rf ~/.dropbox-dist
+sudo install -dm0 ~/.dropbox-dist
