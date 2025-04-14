@@ -62,6 +62,7 @@ yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texl
 yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd --needed --noconfirm
 
 # Install workspace packages
+yay -S libappindicator-gtk3 libappindicator-gtk2 --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
 yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
 yay -S nautilus-dropbox --needed --noconfirm
