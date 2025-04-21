@@ -1,0 +1,17 @@
+[/]
+enable-blur-selected-tilepreview=true
+enable-blur-snap-assistant=true
+enable-screen-edges-windows-suggestions=false
+enable-smart-window-border-radius=true
+enable-snap-assistant-windows-suggestions=false
+enable-tiling-system-windows-suggestions=false
+enable-window-border=false
+selected-layouts=[['605761'], ['605761']]
+snap-assistant-threshold=18
+span-window-down=['<Control><Super>Down']
+span-window-left=['<Control><Super>Left']
+span-window-right=['<Control><Super>Right']
+span-window-up=['<Control><Super>Up']
+top-edge-maximize=true
+window-border-color='rgb(153,193,241)'
+window-border-width=uint32 4
