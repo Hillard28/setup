@@ -37,6 +37,7 @@ Extension Manager
 Extensions
 
 Utilities:
+Logs
 Disks
 Disk Usage Analyzer
 Document Scanner
@@ -51,7 +52,6 @@ EndeavourOS log tool
 EndeavourOS Quickstart Installer
 
 Help:
-Logs
 Help
 Tour
 Parental Controls

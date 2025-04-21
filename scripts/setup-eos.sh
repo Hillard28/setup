@@ -2,9 +2,9 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Copy background, profile, and icon folders
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 gtk-update-icon-cache --force ~/.local/share/icons/Infinity
 gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
 gtk-update-icon-cache --force ~/.local/share/icons/Reversal
@@ -62,9 +62,10 @@ yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texl
 yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd --needed --noconfirm
 
 # Install workspace packages
-yay -S libappindicator-gtk3 libappindicator-gtk2 --needed --noconfirm
+yay -S libappindicator-gtk3 --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
-yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
+yay -S libreoffice-fresh --needed --noconfirm
+yay -S dropbox slack-desktop --needed --noconfirm
 yay -S nautilus-dropbox --needed --noconfirm
 
 # Install configuration packages
