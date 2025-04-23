@@ -4,10 +4,9 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Copy background, profile, and icon folders
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Background ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Documents ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/Pictures/Profile ~/Pictures
-sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 gtk-update-icon-cache --force ~/.local/share/icons/Infinity
 gtk-update-icon-cache --force ~/.local/share/icons/Infinity-Inverse
 gtk-update-icon-cache --force ~/.local/share/icons/Reversal
