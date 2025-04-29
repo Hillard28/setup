@@ -21,6 +21,9 @@ yay -S papers --needed --noconfirm
 yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
 fc-cache -f
 
+# Install GTK3 Adwaita theme
+yay -S adw-gtk-theme --needed --noconfirm
+
 # Install and configure ZRAM package
 yay -S zram-generator --needed --noconfirm
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
