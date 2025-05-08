@@ -29,7 +29,7 @@ yay -S zram-generator --needed --noconfirm
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'zram-size = ram * 2' >> /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'compression-algorithm = zstd' >> /etc/systemd/zram-generator.conf"
-sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+sudo sh -c "echo 'vm.page-cluster = 0' > /etc/sysctl.d/99-vm-zram-parameters.conf"
 
 # Install development libraries
 yay -S base-devel clang llvm cmake openssl zlib xz tk --needed --noconfirm
