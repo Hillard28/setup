@@ -97,7 +97,7 @@
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
-        "on-click": "kgx -e s-tui"
+        "on-click": "gnome-system-monitor"
     },
 
     "battery": {
