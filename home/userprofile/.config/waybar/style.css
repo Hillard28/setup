@@ -3,9 +3,14 @@
 
 
 /* Tokyo Night */
+/*
 @define-color background #1a1b26;
 @define-color background-light #24283b;
 @define-color foreground #c0caf5;
+*/
+@define-color background #1d1d20;
+@define-color background-light #24283b;
+@define-color foreground #28282c;
 @define-color black #15161e;
 @define-color red #f7768e;
 @define-color green #9ece6a;
@@ -86,6 +91,8 @@
 @define-color battery-critical-color @red;
 @define-color network-color @blue;
 @define-color network-disconnected-color @red;
+@define-color bluetooth-color @blue;
+@define-color bluetooth-disconnected-color @red;
 @define-color pulseaudio-color @orange;
 @define-color pulseaudio-muted-color @red;
 @define-color backlight-color @yellow;
@@ -115,7 +122,7 @@ window#waybar {
 
 /* Common module styling with border-bottom */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
-#memory, #temperature, #battery, #network, #pulseaudio,
+#memory, #temperature, #battery, #network, #bluetooth, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-power, #custom-quote,
 #idle_inhibitor, #tray {
     padding: 0 10px;
@@ -238,6 +245,18 @@ window#waybar {
 #network.disconnected {
     color: @network-disconnected-color;
     border-bottom-color: @network-disconnected-color;
+}
+
+#bluetooth {
+    color: @bluetooth-color;
+    border-bottom-color: @bluetooth-color;
+    font-size: 16px;
+}
+
+#bluetooth.disconnected {
+    color: @bluetooth-disconnected-color;
+    border-bottom-color: @bluetooth-disconnected-color;
+    font-size: 16px;
 }
 
 #pulseaudio {
