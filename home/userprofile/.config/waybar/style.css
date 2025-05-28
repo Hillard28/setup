@@ -3,14 +3,9 @@
 
 
 /* Tokyo Night */
-/*
 @define-color background #1a1b26;
 @define-color background-light #24283b;
 @define-color foreground #c0caf5;
-*/
-@define-color background #1d1d20;
-@define-color background-light #24283b;
-@define-color foreground #28282c;
 @define-color black #15161e;
 @define-color red #f7768e;
 @define-color green #9ece6a;
@@ -103,6 +98,10 @@
 @define-color quote-color @green;
 @define-color idle-inhibitor-color @foreground;
 @define-color idle-inhibitor-active-color @red;
+
+@define-color background #28282c;
+@define-color background-light #24283b;
+@define-color foreground #1d1d20;
 
 * {
     /* Base styling for all modules */
