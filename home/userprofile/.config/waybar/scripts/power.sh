@@ -1,12 +1,12 @@
 #!/bin/bash
 
-SELECTION="$(printf "Logout\nSuspend\nReboot\nShutdown" | fuzzel --dmenu -l 4)"
+SELECTION="$(printf "⏾ Suspend\n⭘ Logout\n⏼ Reboot\n⏻ Shutdown" | fuzzel --dmenu -l 4 --placeholder "Command" -a "top-right" -r 15)"
 
 case $SELECTION in
-	*"Logout")
-		niri msg action quit --skip-confirmation;;
 	*"Suspend")
 		systemctl suspend;;
+	*"Logout")
+		niri msg action quit --skip-confirmation;;
 	*"Reboot")
 		systemctl reboot;;
 	*"Shutdown")
