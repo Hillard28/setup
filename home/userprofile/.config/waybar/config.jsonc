@@ -46,7 +46,7 @@
     
     "custom/power": {
         "format": "⏻{}",
-        "on-click": "$HOME/.config/waybar/scripts/power.sh",
+        "on-click": "$HOME/.config/waybar/scripts/power.sh"
     },
 
     "idle_inhibitor": {
@@ -114,8 +114,9 @@
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        // "format-alt": "{icon} {time}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "on-click": "$HOME/.config/waybar/scripts/power_profile.sh"
     },
 
     "network": {
