@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SELECTION="$(printf "⏾ Suspend\n⭘ Logout\n⏼ Reboot\n⏻ Shutdown" | fuzzel --dmenu -l 4 --placeholder "Command" -a "top-right" -r 2 -f "Adwaita Mono:size=12" -w 10)"
+SELECTION="$(printf "⏾ Suspend\n⭘ Logout\n⏼ Reboot\n⏻ Shutdown" | fuzzel --dmenu -l 4 --placeholder "Command" -a "top-right" -r 2 -f "Adwaita Mono:size=12" -w 12)"
 
 case $SELECTION in
 	*"Suspend")
