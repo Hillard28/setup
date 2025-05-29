@@ -98,6 +98,9 @@
 @define-color quote-color @green;
 @define-color idle-inhibitor-color @foreground;
 @define-color idle-inhibitor-active-color @red;
+@define-color ppd-power-saver @green;
+@define-color ppd-balanced @yellow;
+@define-color ppd-performance @red;
 
 @define-color background #28282c;
 @define-color background-light #24283b;
@@ -121,7 +124,7 @@ window#waybar {
 
 /* Common module styling with border-bottom */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
-#memory, #temperature, #battery, #network, #bluetooth, #pulseaudio,
+#memory, #temperature, #battery, #power-profiles-daemon, #network, #bluetooth, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-power, #custom-quote,
 #idle_inhibitor, #tray {
     padding: 0 10px;
@@ -234,6 +237,26 @@ window#waybar {
 #battery.critical:not(.charging) {
     color: @battery-critical-color;
     border-bottom-color: @battery-critical-color;
+}
+
+#power-profiles-daemon {
+    color: @ppd-balanced;
+    border-bottom-color: @ppd-balanced;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @ppd-power-saver;
+    border-bottom-color: @ppd-power-saver;
+}
+
+#power-profiles-daemon.balanced {
+    color: @ppd-balanced;
+    border-bottom-color: @ppd-balanced;
+}
+
+#power-profiles-daemon.performance {
+    color: @ppd-performance;
+    border-bottom-color: @ppd-performance;
 }
 
 #network {

@@ -6,7 +6,7 @@
     "margin": 5,
     "modules-left": ["niri/workspaces", "tray"], // custom/weather
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "temperature", "disk", "battery", "custom/uptime", "custom/power"], // custom/updates
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "temperature", "disk", "battery", "power-profiles-daemon", "custom/uptime", "custom/power"], // custom/updates
 
 
     "niri/workspaces": {
@@ -114,9 +114,21 @@
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
-        // "format-alt": "{icon} {time}",
+        "format-alt": "{icon} {time}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-click": "$HOME/.config/waybar/scripts/power_profile.sh"
+        // "on-click": "$HOME/.config/waybar/scripts/power_profile.sh"
+    },
+    
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
 
     "network": {
