@@ -31,6 +31,7 @@
 @define-color white #d3c6aa;
 @define-color orange #e69875;
 
+
 /* Pastel TTY Colors */
 @define-color background #212121;
 @define-color background-light #3a3a3a;
@@ -44,7 +45,6 @@
 @define-color cyan #a3e8e8;
 @define-color white #ffffff;
 @define-color orange #ff8952;
-
 
 
 /* Gruvbox Dark Colors */
@@ -62,6 +62,20 @@
 @define-color orange #d65d0e;
 
 
+/* Adwaita/Gruvbox Colors */
+@define-color background #28282c;
+@define-color background-light #24283b;
+@define-color foreground #1d1d20;
+@define-color black #32302f;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color magenta #b16286;
+@define-color cyan #689d6a;
+@define-color white #ebdbb2;
+@define-color orange #d65d0e;
+
 
 /* Module-specific colors */
 @define-color workspaces-color @foreground;
@@ -69,6 +83,7 @@
 @define-color workspaces-focused-fg @cyan;
 @define-color workspaces-urgent-bg @red;
 @define-color workspaces-urgent-fg @black;
+
 
 /* Text and border colors for modules */
 @define-color mode-color @orange;
@@ -102,9 +117,7 @@
 @define-color ppd-balanced @yellow;
 @define-color ppd-performance @red;
 
-@define-color background #28282c;
-@define-color background-light #24283b;
-@define-color foreground #1d1d20;
+
 
 * {
     /* Base styling for all modules */
