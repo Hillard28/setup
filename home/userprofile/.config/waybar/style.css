@@ -73,7 +73,7 @@
 @define-color blue #458588;
 @define-color magenta #b16286;
 @define-color cyan #689d6a;
-@define-color white #ebdbb2;
+@define-color white #ffffff;
 @define-color orange #d65d0e;
 
 
@@ -349,6 +349,11 @@ window#waybar {
     background-color: transparent;
     padding: 0 10px;
     margin: 0 2px;
+}
+
+#tray menu {
+    background-color: @background;
+    color: @white;
 }
 
 #tray > .passive {
