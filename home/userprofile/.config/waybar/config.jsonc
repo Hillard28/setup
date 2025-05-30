@@ -4,7 +4,7 @@
     "height": 30,
     "spacing": 1,
     "margin": 5,
-    "modules-left": ["niri/workspaces", "tray"], // custom/weather
+    "modules-left": ["niri/workspaces", "tray", "custom/playerctl"], // custom/weather
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "temperature", "disk", "battery", "power-profiles-daemon", "custom/uptime", "custom/power"], // custom/updates
 
@@ -99,6 +99,7 @@
     },
 
     "temperature": {
+    	// "thermal-zone": 11,
     	"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
