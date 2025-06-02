@@ -93,9 +93,10 @@
     },
 
     "memory": {
-        "format": "󰍛 {}%",
+        "format": "󰍛 {percentage}%",
+        "format-alt": "󰍛 {swapPercentage}%",
+        "tooltip-format": "{used:0.1f}GiB used\n{swapUsed:0.1f}GiB used",
         "interval": 1,
-        "on-click": "gnome-system-monitor"
     },
 
     "temperature": {
