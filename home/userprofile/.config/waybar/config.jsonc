@@ -6,7 +6,7 @@
     "margin": 5,
     "modules-left": ["niri/workspaces", "tray", "custom/playerctl"], // custom/weather
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "temperature", "disk", "battery", "power-profiles-daemon", "custom/uptime", "custom/power"], // custom/updates
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "cpu", "memory", "temperature", "battery", "power-profiles-daemon", "group/group-power"], // disk, custom/uptime, custom/updates
 
 
     "niri/workspaces": {
@@ -44,7 +44,7 @@
         "interval": 60
     },
     
-    "custom/power": {
+    "custom/power_main": {
         "format": "⏻{}",
         "on-click": "$HOME/.config/waybar/scripts/power.sh"
     },
@@ -100,8 +100,8 @@
     },
 
     "temperature": {
-    	// "thermal-zone": 11,
-    	"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
+    	"thermal-zone": 11,
+    	// "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
@@ -191,5 +191,40 @@
     "tray": {
         "icon-size": 18,
         "spacing": 5
+    },
+    
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+	    "transition-duration": 500,
+	    "children-class": "not-power",
+	    "transition-left-to-right": false,
+        },
+        "modules": [
+	    "custom/power", // First element is the "group leader" and won't ever be hidden
+	    "custom/quit",
+	    "custom/lock",
+	    "custom/reboot",
+        ]
+    },
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/logout.sh"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/suspend.sh"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/reboot.sh"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "$HOME/.config/waybar/scripts/shutdown.sh"
     }
 }

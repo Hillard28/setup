@@ -138,8 +138,8 @@ window#waybar {
 /* Common module styling with border-bottom */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #power-profiles-daemon, #network, #bluetooth, #pulseaudio,
-#backlight, #disk, #custom-uptime, #custom-updates, #custom-power, #custom-quote,
-#idle_inhibitor, #tray {
+#backlight, #disk, #custom-uptime, #custom-updates, #custom-power, #custom-reboot, #custom-lock,
+#custom-quit, #custom-quote, #idle_inhibitor, #tray {
     padding: 0 10px;
     margin: 0 2px;
     border-bottom: 2px solid transparent;
@@ -327,7 +327,22 @@ window#waybar {
 #custom-power {
     color: @power-color;
     border-bottom-color: @power-color;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+#custom-reboot {
+    color: @white;
+    font-size: 16px;
+}
+
+#custom-lock {
+    color: @white;
+    font-size: 16px;
+}
+
+#custom-quit {
+    color: @white;
+    font-size: 16px;
 }
 
 #custom-quote {
