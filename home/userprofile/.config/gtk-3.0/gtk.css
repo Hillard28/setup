@@ -105,12 +105,12 @@
 @define-color dark_3 rgba(218, 218, 218, 1.00);
 @define-color dark_4 rgba(255, 255, 255, 1.00);
 
-windowcontrols button image:not(:hover) {
+button:not(:hover) {
     background-color: transparent;
     border-radius: 0;
 }
 
-windowcontrols button image:hover {
+button:hover {
     border-radius: 0;
 }
 
