@@ -356,7 +356,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kgx" { spawn "kgx"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Open a Browser: firefox" { spawn "firefox"; }
-    Mod+N hotkey-overlay-title="Open a File Explorer: nautilus" { spawn "nautilus"; }
+    Mod+F hotkey-overlay-title="Open a File Explorer: nautilus" { spawn "nautilus"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -533,8 +533,8 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+M { maximize-column; }
+    Mod+Shift+M { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
