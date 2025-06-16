@@ -84,7 +84,7 @@ yay -S github-cli --needed --noconfirm
 git config --global user.email "ryangilland@gmail.com"
 git config --global user.name "Ryan Gilland"
 
-# gsettings set org.gnome.desktop.wm.preferences button-layout "appmenu:minimize,maximize,close"
+# gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:appmenu"
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
