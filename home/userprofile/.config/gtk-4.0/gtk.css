@@ -20,6 +20,7 @@ windowcontrols button.close {
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 8px;
+  background-size: 14px 14px;
 }
 
 windowcontrols button.close:hover {
@@ -28,6 +29,7 @@ windowcontrols button.close:hover {
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 8px;
+  background-size: 14px 14px;
 }
 
 windowcontrols button.maximize {
@@ -36,6 +38,7 @@ windowcontrols button.maximize {
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 8px;
+  background-size: 14px 14px;
 }
 
 windowcontrols button.maximize:hover {
@@ -44,6 +47,7 @@ windowcontrols button.maximize:hover {
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 8px;
+  background-size: 14px 14px;
 }
 
 .fullscreen windowcontrols button.maximize:hover, .maximized windowcontrols button.maximize:hover {
@@ -52,6 +56,7 @@ windowcontrols button.maximize:hover {
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 8px;
+  background-size: 14px 14px;
 }
 
 windowcontrols button.minimize {
@@ -59,6 +64,7 @@ windowcontrols button.minimize {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-size: 14px 14px;
 }
 
 windowcontrols button.minimize:hover {
@@ -66,5 +72,6 @@ windowcontrols button.minimize:hover {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-size: 14px 14px;
 }
 
