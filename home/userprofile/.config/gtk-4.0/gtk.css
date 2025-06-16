@@ -3,6 +3,8 @@ windowcontrols button {
   min-height: 16px;
   padding: 0px;
   margin: 3px;
+  box-shadow: none;
+  border-color: transparent;
 }
 
 windowcontrols button image {
