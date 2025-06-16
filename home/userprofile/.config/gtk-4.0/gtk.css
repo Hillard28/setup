@@ -1,20 +1,63 @@
-windowcontrols button image:not(:hover) {
-    background-color: transparent;
+windowcontrols button {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 1px;
+  margin: 2px;
 }
 
-/* Remove rounded corners */
-.titlebar,
-.titlebar .background,
-decoration,
-window,
-window.background
-{
-    border-radius: 0;
+windowcontrols button image {
+  background-color: transparent;
+  color: transparent;
+  padding: 0px;
+  margin: 0px;
 }
 
-/* Remove csd shadows */
-decoration, decoration:backdrop
-{
-    box-shadow: none;
+windowcontrols button.close {
+  background-image: url("icons/close.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+windowcontrols button.close:hover {
+  background-image: url("icons/close-hover.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+windowcontrols button.maximize {
+  background-image: url("icons/maximize.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+windowcontrols button.maximize:hover {
+  background-image: url("icons/maximize-hover.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.fullscreen windowcontrols button.maximize:hover, .maximized windowcontrols button.maximize:hover {
+  background-image: url("icons/restore-hover.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+windowcontrols button.minimize {
+  background-image: url("icons/minimize.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+windowcontrols button.minimize:hover {
+  background-image: url("icons/minimize-hover.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
