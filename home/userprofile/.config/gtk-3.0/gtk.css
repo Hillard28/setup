@@ -17,7 +17,7 @@ button.titlebutton.close {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 button.titlebutton.close:hover {
@@ -25,7 +25,7 @@ button.titlebutton.close:hover {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 button.titlebutton.maximize {
@@ -33,7 +33,7 @@ button.titlebutton.maximize {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 button.titlebutton.maximize:hover {
@@ -41,7 +41,7 @@ button.titlebutton.maximize:hover {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .fullscreen button.titlebutton.maximize:hover, .maximized button.titlebutton.maximize:hover {
@@ -49,7 +49,7 @@ button.titlebutton.maximize:hover {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 button.titlebutton.minimize {
