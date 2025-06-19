@@ -11,7 +11,7 @@ yay -Syyu --noconfirm
 # Install Nerd and Segoe UI fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts --noconfirm
-yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
+yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
 fc-cache -f
 
 # Install and configure ZRAM package
