@@ -66,8 +66,7 @@ yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-
 # Install workspace packages
 yay -S libappindicator-gtk3 --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
-yay -S libreoffice-fresh --needed --noconfirm
-yay -S dropbox slack-desktop --needed --noconfirm
+yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
 yay -S nautilus-dropbox --needed --noconfirm
 
 # Install configuration packages
@@ -99,7 +98,7 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
-sudo mv $SCRIPT_DIR/../home/userprofile/.config/paperwm ~/.config
+# sudo mv $SCRIPT_DIR/../home/userprofile/.config/paperwm ~/.config
 
 # Hide applications
 sudo mv /usr/share/applications/avahi-discover.desktop /usr/share/applications/avahi-discover.desktop.bak
