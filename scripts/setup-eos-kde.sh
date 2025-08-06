@@ -19,9 +19,9 @@ yay -S zram-generator --needed --noconfirm
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'zram-size = ram * 2' >> /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'compression-algorithm = zstd' >> /etc/systemd/zram-generator.conf"
-sudo sh -c "echo 'vm.swappiness = 60' > /etc/sysctl.d/99-vm-zram-parameters.conf"
-sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
-sudo sh -c "echo 'vm.watermark_scale_factor = 10' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+sudo sh -c "echo 'vm.swappiness = 10' > /etc/sysctl.d/99-vm-zram-parameters.conf"
+# sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+# sudo sh -c "echo 'vm.watermark_scale_factor = 10' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 
 # Install development libraries
