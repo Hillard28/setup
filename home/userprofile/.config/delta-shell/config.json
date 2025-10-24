@@ -1,0 +1,74 @@
+{
+  "transition": 0.3,
+  "bar": {
+    "modules": {
+      "start": [
+        "workspaces"
+      ],
+      "center": [
+        "launcher",
+        "clock"
+      ],
+      "end": [
+        "record_indicator",
+        "tray",
+        "keyboard",
+        "quicksettings"
+      ]
+    },
+    "size": 40,
+    "position": "top",
+    "workspaces": {
+      "taskbar": true,
+      "taskbar_icons": {}
+    },
+    "date": {
+      "format": "%b %d  %H:%M"
+    }
+  },
+  "quicksettings": {
+    "buttons": [
+      "network",
+      "bluetooth",
+      "notifications",
+      "screenrecord"
+    ],
+    "sliders": [
+      "volume",
+      "brightness"
+    ]
+  },
+  "launcher": {
+    "clipboard": {
+      "max_items": 50,
+      "image_preview": true
+    },
+    "width": 400,
+    "height": 600
+  },
+  "osd": {
+    "enabled": true,
+    "vertical": false,
+    "width": 300,
+    "height": 56,
+    "position": "bottom",
+    "timeout": 3
+  },
+  "notifications": {
+    "position": "top",
+    "enabled": true,
+    "timeout": 3,
+    "width": 400,
+    "list": {
+      "height": 600
+    }
+  },
+  "weather": {
+    "enabled": true,
+    "location": {
+      "auto": true,
+      "coords": null,
+      "city": "Brooklyn"
+    }
+  }
+}
