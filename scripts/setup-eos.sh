@@ -34,7 +34,7 @@ sudo sh -c "echo 'vm.swappiness = 100' > /etc/sysctl.d/99-vm-zram-parameters.con
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 
 # Install development libraries
-yay -S base-devel clang llvm cmake openssl zlib xz tk --needed --noconfirm
+yay -S base-devel clang llvm cmake ninja meson python-tqdm openssl zlib xz tk --needed --noconfirm
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -fsSL https://install.julialang.org | sh
 . ~/.bashrc
