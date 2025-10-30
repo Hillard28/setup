@@ -6,7 +6,6 @@ cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 gtk-update-icon-cache --force ~/.local/share/icons/Infinity
-gtk-update-icon-cache --force ~/.local/share/icons/Reversal
 
 # Update installed packages
 yay -Syyu --noconfirm
@@ -18,7 +17,7 @@ yay -S papers --needed --noconfirm
 # Install Nerd and Segoe UI fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts --noconfirm
-yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
+yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
 fc-cache -f
 
 # Install GTK3 Adwaita theme
@@ -29,11 +28,10 @@ yay -S zram-generator --needed --noconfirm
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'zram-size = ram * 2' >> /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'compression-algorithm = zstd' >> /etc/systemd/zram-generator.conf"
-sudo sh -c "echo 'vm.swappiness = 180' > /etc/sysctl.d/99-vm-zram-parameters.conf"
-sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
-sudo sh -c "echo 'vm.watermark_scale_factor = 125' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+sudo sh -c "echo 'vm.swappiness = 100' > /etc/sysctl.d/99-vm-zram-parameters.conf"
+# sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+# sudo sh -c "echo 'vm.watermark_scale_factor = 10' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
-sudo sh -c "echo 'vm.min_free_kbytes = $(awk '/MemTotal/ {printf "%.0f", $2 * 0.01}' /proc/meminfo)' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 
 # Install development libraries
 yay -S base-devel clang llvm cmake openssl zlib xz tk --needed --noconfirm
@@ -67,8 +65,8 @@ yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-
 # Install workspace packages
 yay -S libappindicator-gtk3 --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
-yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
-yay -S nautilus-dropbox --needed --noconfirm
+yay -S libreoffice-fresh --needed --noconfirm
+yay -S dropbox slack-desktop --needed --noconfirm
 
 # Install configuration packages
 yay -S extension-manager gnome-tweaks dconf-editor --needed --noconfirm
@@ -85,7 +83,7 @@ git config --global user.email "ryangilland@gmail.com"
 git config --global user.name "Ryan Gilland"
 
 # gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:appmenu"
-sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
+# sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Hyprland, Astal, AGS, SWWW, and utility packages
@@ -100,25 +98,6 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pi
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/paperwm ~/.config
-
-# Hide applications
-sudo mv /usr/share/applications/avahi-discover.desktop /usr/share/applications/avahi-discover.desktop.bak
-sudo mv /usr/share/applications/bssh.desktop /usr/share/applications/bssh.desktop.bak
-sudo mv /usr/share/applications/bvnc.desktop /usr/share/applications/bvnc.desktop.bak
-sudo mv /usr/share/applications/qv4l2.desktop /usr/share/applications/qv4l2.desktop.bak
-sudo mv /usr/share/applications/qvidcap.desktop /usr/share/applications/qvidcap.desktop.bak
-sudo mv /usr/share/applications/stoken-gui.desktop /usr/share/applications/stoken-gui.desktop.bak
-sudo mv /usr/share/applications/stoken-gui-small.desktop /usr/share/applications/stoken-gui-small.desktop.bak
-sudo mv /usr/share/applications/xdvi.desktop /usr/share/applications/xdvi.desktop.bak
-sudo mv /usr/share/applications/org.pulseaudio.pavucontrol.desktop /usr/share/applications/org.pulseaudio.pavucontrol.desktop.bak
-sudo mv /usr/share/applications/gnome-nettool.desktop /usr/share/applications/gnome-nettool.desktop.bak
-sudo mv /usr/share/applications/yad-settings.desktop /usr/share/applications/yad-settings.desktop.bak
-sudo mv /usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop.bak
-sudo mv /usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop.bak
-sudo mv /usr/share/applications/cmake-gui.desktop /usr/share/applications/cmake-gui.desktop.bak
-sudo mv /usr/share/applications/org.gnome.Usage.desktop /usr/share/applications/org.gnome.Usage.desktop.bak
-sudo mv /usr/share/applications/org.gnome.PowerStats.desktop /usr/share/applications/org.gnome.PowerStats.desktop.bak
-sudo mv /usr/share/applications/org.gnome.Evince.desktop /usr/share/applications/org.gnome.Evince.desktop.bak
 
 # Configure GitHub CLI
 gh auth login
