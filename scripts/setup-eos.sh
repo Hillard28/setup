@@ -65,8 +65,8 @@ yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-
 # Install workspace packages
 yay -S libappindicator-gtk3 --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
-yay -S libreoffice-fresh --needed --noconfirm
 yay -S dropbox slack-desktop --needed --noconfirm
+yay -S onlyoffice-bin --needed --noconfirm
 
 # Install configuration packages
 yay -S extension-manager gnome-tweaks dconf-editor --needed --noconfirm

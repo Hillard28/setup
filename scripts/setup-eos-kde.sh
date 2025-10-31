@@ -53,8 +53,8 @@ yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texl
 
 # Install workspace packages
 yay -S python-gpgme --needed --noconfirm
-yay -S libreoffice-fresh --needed --noconfirm
 yay -S dropbox slack-desktop --needed --noconfirm
+yay -S onlyoffice-bin --needed --noconfirm
 
 # Install media
 yay -S spotify inkscape --needed --noconfirm
