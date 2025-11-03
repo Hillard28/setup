@@ -4,8 +4,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # Copy background, profile, and icon folders
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
-# cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
-# gtk-update-icon-cache --force ~/.local/share/icons/infinity
+cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+gtk-update-icon-cache --force ~/.local/share/icons/infinity
 
 # Update installed packages
 yay -Syyu --noconfirm
@@ -54,7 +54,7 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.pro
 echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 
 # Install Stata requirements
-yay -S gtk2 ncurses5-compat-libs --needed --noconfirm
+# yay -S gtk2 ncurses5-compat-libs --needed --noconfirm
 
 # Install TeX Live packages 
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir --needed --noconfirm
