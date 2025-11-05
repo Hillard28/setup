@@ -34,7 +34,7 @@
   },
   "spacing": 10,
   "shadow": true,
-  "radius": 15,
+  "radius": 4,
   "window": {
     "padding": 15,
     "opacity": 1,
