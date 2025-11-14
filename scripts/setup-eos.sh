@@ -17,7 +17,7 @@ yay -S papers --needed --noconfirm
 # Install Nerd and Segoe UI fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts --noconfirm
-yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm
+yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
 fc-cache -f
 
 # Install GTK3 Adwaita theme
@@ -66,7 +66,8 @@ yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-
 yay -S libappindicator --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
 yay -S dropbox slack-desktop --needed --noconfirm
-yay -S onlyoffice-bin --needed --noconfirm
+yay -S libreoffice-fresh --needed --noconfirm
+# yay -S onlyoffice-bin --needed --noconfirm
 
 # Install configuration packages
 yay -S extension-manager gnome-tweaks dconf-editor --needed --noconfirm
@@ -87,17 +88,16 @@ git config --global user.name "Ryan Gilland"
 # sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Hyprland, Astal, AGS, SWWW, and utility packages
-# yay -S uwsm --noconfirm
-# yay -S brightnessctl --noconfirm
-# yay -S niri fuzzel swww --noconfirm
-# yay -S libastal-meta aylurs-gtk-shell-git --noconfirm
-# yay -S hyprland hyprlock fuzzel swww grim slurp --noconfirm
+# yay -S uwsm --needed --noconfirm
+# yay -S brightnessctl --needed --noconfirm
+# yay -S niri fuzzel swww --needed --noconfirm
+# yay -S libastal-meta aylurs-gtk-shell-git --needed --noconfirm
+# yay -S hyprland hyprlock grim slurp --needed --noconfirm
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/ags ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/themes ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hypr ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/hyprpanel ~/.config
 # sudo mv $SCRIPT_DIR/../home/userprofile/.config/fuzzel ~/.config
-# sudo mv $SCRIPT_DIR/../home/userprofile/.config/paperwm ~/.config
 
 # Configure GitHub CLI
 gh auth login
