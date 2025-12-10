@@ -5,15 +5,23 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+gtk-update-icon-cache --force ~/.local/share/icons/infinity
 
 # Update installed packages
 yay -Syyu --noconfirm
+
+# Install missing gnome packages
+yay -S gnome --needed --noconfirm
+yay -S papers --needed --noconfirm
 
 # Install Nerd and Segoe UI fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
 # yay -S nerd-fonts --noconfirm
 yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
 fc-cache -f
+
+# Install GTK3 Adwaita theme
+yay -S adw-gtk-theme --needed --noconfirm
 
 # Install and configure ZRAM package
 yay -S zram-generator --needed --noconfirm
@@ -51,12 +59,18 @@ echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 # Install TeX Live packages 
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir --needed --noconfirm
 
+# Install Gnome VFS packages
+yay -S gvfs gvfs-afc gvfs-dnssd gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd --needed --noconfirm
+
 # Install workspace packages
+yay -S libappindicator --needed --noconfirm
 yay -S python-gpgme --needed --noconfirm
 yay -S dropbox slack-desktop --needed --noconfirm
 yay -S libreoffice-fresh --needed --noconfirm
 # yay -S onlyoffice-bin --needed --noconfirm
 
+# Install configuration packages
+yay -S extension-manager gnome-tweaks dconf-editor --needed --noconfirm
 
 # Install media
 yay -S spotify inkscape --needed --noconfirm
@@ -68,6 +82,10 @@ yay -S visual-studio-code-bin --needed --noconfirm
 yay -S github-cli --needed --noconfirm
 git config --global user.email "ryangilland@gmail.com"
 git config --global user.name "Ryan Gilland"
+
+# gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:appmenu"
+# sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo '/usr/share/pixmaps/endeavouros-logo-text-dark.svg'
+# sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
 # Install niri, Hyprland, Astal, AGS, SWWW, and utility packages
 # yay -S uwsm --needed --noconfirm
