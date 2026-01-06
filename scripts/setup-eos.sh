@@ -7,12 +7,12 @@ cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 
 # Update installed packages
-yay -Syyu --noconfirm
+yay -Syu --noconfirm
 
-# Install Nerd and Segoe UI fonts
+# Install Adwaita, Segoe UI, and Nerd fonts
 # sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
-# yay -S nerd-fonts --noconfirm
 yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
+# yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
 fc-cache -f
 
 # Install and configure ZRAM package
@@ -38,17 +38,18 @@ curl -fsSL https://install.julialang.org | sh
 . ~/.bash_profile
 . ~/.profile
 
-# Install Pyenv
-curl -fsSL https://pyenv.run | bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(pyenv init - bash)"' >> ~/.bash_profile
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-echo 'eval "$(pyenv init - bash)"' >> ~/.profile
+# Install Python packages and Pyenv
+yay -S python-gpgme --needed --noconfirm
+# curl -fsSL https://pyenv.run | bash
+# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+# echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+# echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+# echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+# echo 'eval "$(pyenv init - bash)"' >> ~/.bash_profile
+# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+# echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+# echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 
 # Install Stata requirements
 # yay -S gtk2 ncurses5-compat-libs --needed --noconfirm
@@ -57,7 +58,6 @@ echo 'eval "$(pyenv init - bash)"' >> ~/.profile
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir --needed --noconfirm
 
 # Install workspace packages
-yay -S python-gpgme --needed --noconfirm
 yay -S dropbox slack-desktop --needed --noconfirm
 yay -S libreoffice-fresh --needed --noconfirm
 # yay -S onlyoffice-bin --needed --noconfirm
@@ -72,11 +72,6 @@ yay -S visual-studio-code-bin --needed --noconfirm
 yay -S github-cli --needed --noconfirm
 git config --global user.email "ryangilland@gmail.com"
 git config --global user.name "Ryan Gilland"
-
-# Install niri, quickshell, and utility packages
-# yay -S niri xwayland-satellite --needed --noconfirm
-# yay -S brightnessctl quickshell cava cliphist evolution-data-server gpu-screen-recorder --needed --noconfirm
-# yay -S noctalia-shell --needed --noconfirm
 
 # Configure GitHub CLI
 gh auth login
