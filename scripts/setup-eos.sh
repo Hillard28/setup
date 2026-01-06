@@ -5,6 +5,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
+cp -r $SCRIPT_DIR/../home/userprofile/.local/share/color-schemes ~/.local/share
 
 # Update installed packages
 yay -Syu --noconfirm
