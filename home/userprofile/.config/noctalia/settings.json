@@ -76,7 +76,7 @@
                 },
                 {
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "yyyy-MM-dd HH:mm",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
@@ -108,9 +108,9 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "none",
-                    "showApplications": false,
+                    "showApplications": true,
                     "showLabelsOnlyWhenOccupied": true,
-                    "unfocusedIconsOpacity": 1
+                    "unfocusedIconsOpacity": 0.5
                 },
                 {
                     "colorizeIcons": false,
@@ -120,19 +120,6 @@
                     "scrollingMode": "hover",
                     "showIcon": true,
                     "useFixedWidth": false
-                },
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "iconScale": 1,
-                    "id": "Taskbar",
-                    "maxTaskbarWidth": 40,
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true,
-                    "showPinnedApps": true,
-                    "showTitle": false,
-                    "smartWidth": true,
-                    "titleWidth": 120
                 }
             ],
             "right": [
@@ -187,6 +174,14 @@
                 },
                 {
                     "id": "PowerProfile"
+                },
+                {
+                    "displayMode": "onhover",
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false,
+                    "warningThreshold": 30
                 },
                 {
                     "colorizeDistroLogo": false,
