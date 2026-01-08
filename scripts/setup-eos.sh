@@ -27,8 +27,8 @@ sudo sh -c "echo 'vm.swappiness = 180' > /etc/sysctl.d/99-vm-zram-parameters.con
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 MINIMUM=$(awk '/MemTotal/ {printf "%.0f", $2 * 0.01}' /proc/meminfo)
 CURRENT=$(sysctl vm.min_free_kbytes | awk '{print $3}')
-if ((MINIMUM > CURRENT)); then
-    sudo sh -c "echo 'vm.min_free_kbytes = $(MINIMUM)' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+if (($MINIMUM > $CURRENT)); then
+    sudo sh -c "echo 'vm.min_free_kbytes = $MINIMUM' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 fi
 
 # Install development libraries
