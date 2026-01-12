@@ -5,7 +5,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cp -r $SCRIPT_DIR/../home/userprofile/.config/systemd ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/niri ~/.config
-sudo cp -r $SCRIPT_DIR/../usr/share/xdg-desktop-portal /usr/share
+# sudo cp -r $SCRIPT_DIR/../usr/share/xdg-desktop-portal /usr/share
 
 # Install niri and xwayland-satellite
 yay -S niri xwayland-satellite --needed --noconfirm
@@ -21,7 +21,7 @@ yay -S noctalia-shell --needed --noconfirm
 yay -S swayidle --needed --noconfirm
 
 # Install archlinux-xdg-menu for Dolphin compatability
-yay -S archlinux-xdg-menu --needed --noconfirm
+# yay -S archlinux-xdg-menu --needed --noconfirm
 
 # Attach swayidle service to niri session
 systemctl --user daemon-reload
