@@ -10,9 +10,8 @@ cp -r $SCRIPT_DIR/../home/userprofile/.local/share/color-schemes ~/.local/share
 # Update installed packages
 yay -Syu --noconfirm
 
-# Install Adwaita, Segoe UI, and Nerd fonts
-# sudo mv $SCRIPT_DIR/../home/userprofile/.local/share/fonts ~/.local/share
-yay -S adwaita-fonts ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
+# Install Adwaita, and Nerd fonts
+yay -S adwaita-fonts --needed --noconfirm
 # yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
 fc-cache -f
 

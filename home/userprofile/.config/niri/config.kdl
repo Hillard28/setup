@@ -383,7 +383,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: konsole" { spawn "konsole"; }
     Mod+F hotkey-overlay-title="Open a File Manager: dolphin" { spawn "dolphin"; }
     Mod+B hotkey-overlay-title="Open a Browser: firefox" { spawn "firefox"; }
-    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
     // Noctalia launcher
     Mod+Slash { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
