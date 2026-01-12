@@ -5,6 +5,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cp -r $SCRIPT_DIR/../home/userprofile/.config/systemd ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/niri ~/.config
+sudo cp -r $SCRIPT_DIR/../usr/share/xdg-desktop-portal /usr/share
 
 # Install niri and xwayland-satellite
 yay -S niri xwayland-satellite --needed --noconfirm
