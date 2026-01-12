@@ -11,6 +11,7 @@ environment {
     XDG_CURRENT_DESKTOP "kde"
     XDG_MENU_PREFIX "plasma-"
     // XDG_DATA_DIRS "/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:/home/rgilland/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
+    GTK_RC_FILES "/etc/gtk/gtkrc:/home/rgilland/.gtkrc:/home/rgilland/.config/gtkrc"
 }
 
 // Input device configuration.
