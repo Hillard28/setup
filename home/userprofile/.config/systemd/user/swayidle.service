@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swayidle -w timeout 120 'qs -c noctalia-shell ipc call lockScreen lock' timeout 121 'niri msg action power-off-monitors' before-sleep 'qs -c noctalia-shell ipc call lockScreen lock'
+ExecStart=/usr/bin/swayidle -w timeout 180 'qs -c noctalia-shell ipc call lockScreen lock' timeout 300 'niri msg action power-off-monitors' before-sleep 'qs -c noctalia-shell ipc call lockScreen lock'
 Restart=on-failure
