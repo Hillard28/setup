@@ -1,12 +1,14 @@
 {
     "appLauncher": {
+        "autoPasteClipboard": false,
+        "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": false,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "pinnedExecs": [
+        "pinnedApps": [
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",
@@ -19,7 +21,6 @@
     },
     "audio": {
         "cavaFrameRate": 30,
-        "externalMixer": "pwvucontrol || pavucontrol",
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
@@ -29,12 +30,12 @@
     },
     "bar": {
         "backgroundOpacity": 0.93,
-        "capsuleOpacity": 1,
+        "capsuleOpacity": 0.5000000000000002,
         "density": "default",
         "exclusive": true,
         "floating": false,
-        "marginHorizontal": 0.25,
-        "marginVertical": 0.25,
+        "marginHorizontal": 5,
+        "marginVertical": 5,
         "monitors": [
         ],
         "outerCorners": false,
@@ -79,15 +80,20 @@
                     "formatHorizontal": "yyyy-MM-dd HH:mm",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "tooltipFormat": "yyyy-MM-dd HH:mm ddd",
                     "useCustomFont": false,
                     "usePrimaryColor": false
                 },
                 {
+                    "compactMode": false,
+                    "compactShowAlbumArt": true,
+                    "compactShowVisualizer": false,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 145,
+                    "panelShowAlbumArt": true,
+                    "panelShowVisualizer": true,
                     "scrollingMode": "hover",
                     "showAlbumArt": false,
                     "showArtistFirst": true,
@@ -105,7 +111,7 @@
                     "followFocusedScreen": false,
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": false,
-                    "iconScale": 0.8,
+                    "iconScale": 0.7999999999999998,
                     "id": "Workspace",
                     "labelMode": "none",
                     "showApplications": true,
@@ -149,9 +155,6 @@
                     ]
                 },
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "hideWhenZero": true,
                     "id": "NotificationHistory",
                     "showUnreadBadge": true
@@ -162,11 +165,12 @@
                 },
                 {
                     "displayMode": "alwaysHide",
-                    "id": "WiFi"
+                    "id": "Network"
                 },
                 {
                     "displayMode": "onhover",
-                    "id": "Volume"
+                    "id": "Volume",
+                    "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
                     "displayMode": "onhover",
@@ -176,7 +180,8 @@
                     "id": "PowerProfile"
                 },
                 {
-                    "displayMode": "onhover",
+                    "deviceNativePath": "",
+                    "displayMode": "alwaysShow",
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
@@ -222,7 +227,6 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generateTemplatesForPredefined": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-fruit-salad",
@@ -268,9 +272,6 @@
                     "id": "Bluetooth"
                 },
                 {
-                    "id": "ScreenRecorder"
-                },
-                {
                     "id": "WallpaperSelector"
                 }
             ],
@@ -311,6 +312,7 @@
         "pinnedApps": [
         ],
         "pinnedStatic": false,
+        "position": "bottom",
         "size": 1
     },
     "general": {
@@ -321,17 +323,18 @@
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0,
-        "enableShadows": true,
+        "enableShadows": false,
         "forceBlackScreenCorners": false,
         "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
-        "radiusRatio": 0.25,
+        "radiusRatio": 0.25000000000000006,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom",
         "shadowOffsetX": 0,
         "shadowOffsetY": 3,
+        "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true
@@ -348,6 +351,8 @@
     "location": {
         "analogClockInCalendar": false,
         "firstDayOfWeek": -1,
+        "hideWeatherCityName": false,
+        "hideWeatherTimezone": false,
         "name": "Brooklyn, NY",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
@@ -415,18 +420,6 @@
         ],
         "overlayLayer": true
     },
-    "screenRecorder": {
-        "audioCodec": "opus",
-        "audioSource": "default_output",
-        "colorRange": "limited",
-        "copyToClipboard": false,
-        "directory": "/home/rgilland/Videos",
-        "frameRate": 60,
-        "quality": "very_high",
-        "showCursor": true,
-        "videoCodec": "h264",
-        "videoSource": "portal"
-    },
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": true,
@@ -474,7 +467,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 37,
+    "settingsVersion": 39,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 3000,
@@ -524,18 +517,23 @@
         "walker": false,
         "wezterm": false,
         "yazi": false,
-        "zed": false
+        "zed": false,
+        "zenBrowser": false
     },
     "ui": {
+        "bluetoothDetailsViewMode": "grid",
+        "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
         "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
         "fontFixed": "Adwaita Mono",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.9,
+        "networkPanelView": "wifi",
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
-        "tooltipsEnabled": true
+        "tooltipsEnabled": true,
+        "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
         "directory": "/home/rgilland/Pictures/Backgrounds",

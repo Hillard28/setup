@@ -8,6 +8,8 @@ environment {
     QT_QPA_PLATFORMTHEME "kde"
     QT_QPA_PLATFORMTHEME_QT6 "kde"
     QT_QPA_PLATFORMTHEME_QT5 "kde"
+    XDG_MENU_PREFIX "plasma-"
+    // XDG_DATA_DIRS "/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:/home/rgilland/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
 }
 
 // Input device configuration.
@@ -222,7 +224,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        on
+        // on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -275,8 +277,9 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "kbuildsycoca6" "--noincremental"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
-spawn-at-startup "env" "XDG_MENU_PREFIX=plasma-" "kbuildsycoca6"
+spawn-at-startup "/usr/lib/pam_kwallet_init"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -356,7 +359,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 6
+    geometry-corner-radius 4
     clip-to-geometry true
 }
 
