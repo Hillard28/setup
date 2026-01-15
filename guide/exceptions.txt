@@ -1,0 +1,5 @@
+login.microsoftonline.com
+login.live.com
+googleusercontent.com
+colab.research.google.com
+duosecurity.com
