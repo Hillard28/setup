@@ -1,6 +1,10 @@
 # Get script directory
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Setup home folders
+mkdir ~/.venv
+mkdir ~/.tmp
+
 # Copy background, profile, and icon folders
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
