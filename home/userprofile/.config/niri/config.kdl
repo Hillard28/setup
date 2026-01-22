@@ -5,16 +5,10 @@
 
 // Configure environment variables
 environment {
+    XDG_MENU_PREFIX "plasma-"
     QT_QPA_PLATFORMTHEME "kde"
     QT_QPA_PLATFORMTHEME_QT6 "kde"
     QT_QPA_PLATFORMTHEME_QT5 "kde"
-    XDG_MENU_PREFIX "plasma-"
-    // XDG_CURRENT_DESKTOP "KDE"
-    // XDG_CONFIG_DIRS "/home/rgilland/.config/kdedefaults:/etc/xdg"
-    // XDG_DATA_DIRS "/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:/home/rgilland/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
-    // GTK_USE_PORTAL "1"
-    // GTK_RC_FILES "/etc/gtk/gtkrc:/home/rgilland/.gtkrc:/home/rgilland/.config/gtkrc"
-    // GTK2_RC_FILES "/etc/gtk-2.0/gtkrc:/home/rgilland/.gtkrc-2.0:/home/rgilland/.config/gtkrc-2.0"
 }
 
 // Input device configuration.

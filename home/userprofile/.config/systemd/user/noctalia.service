@@ -5,6 +5,7 @@ Requisite=graphical-session.target
 After=graphical-session.target
 
 [Service]
+Environment="QT_QPA_PLATFORMTHEME=kde" "QT_QPA_PLATFORMTHEME_QT6=kde" "QT_QPA_PLATFORMTHEME_QT5=kde"
 ExecStart=qs -c noctalia-shell
 Restart=on-failure
 RestartSec=1
