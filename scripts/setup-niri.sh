@@ -11,7 +11,7 @@ cp -r $SCRIPT_DIR/../home/userprofile/.config/niri ~/.config
 yay -S niri xwayland-satellite --needed --noconfirm
 
 # Install noctalia-shell dependencies
-yay -S brightnessctl quickshell gpu-screen-recorder cava cliphist wlsunset evolution-data-server --needed --noconfirm
+yay -S brightnessctl quickshell cava cliphist wlsunset evolution-data-server --needed --noconfirm
 # yay -S ddcutil --needed --noconfirm
 
 # Install noctalia-shell
