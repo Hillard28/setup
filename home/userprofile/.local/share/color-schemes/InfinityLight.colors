@@ -136,7 +136,9 @@ Name=Infinity Light
 shadeSortColumn=true
 
 [KDE]
+Contrast=0
 contrast=4
+frameContrast=0.02
 
 [WM]
 activeBackground=227,229,231
