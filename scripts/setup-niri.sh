@@ -26,3 +26,4 @@ yay -S swayidle --needed --noconfirm
 # Attach swayidle service to niri session
 systemctl --user daemon-reload
 systemctl --user add-wants niri.service swayidle.service
+systemctl --user add-wants niri.service noctalia.service
