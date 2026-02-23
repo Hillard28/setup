@@ -16,13 +16,12 @@ if [ "$USER" = "rgilland" ]; then
 		ipykernel \
 		ipython \
 		jellyfish \
-		lifelines \
+		jupyter \
 		linearmodels \
 		lxml \
 		mapclassify \
 		matplotlib \
 		maturin \
-		numba \
 		numpy \
 		openpyxl \
 		pandas \
