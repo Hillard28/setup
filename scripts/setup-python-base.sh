@@ -29,6 +29,7 @@ if [ "$USER" = "rgilland" ]; then
 		polars \
 		pyarrow \
 		pypdf \
+		pytesseract \
 		requests \
 		scikit-learn \
 		scipy \

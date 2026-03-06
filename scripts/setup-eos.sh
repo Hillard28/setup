@@ -62,15 +62,17 @@ yay -S python-gpgme --needed --noconfirm
 yay -S texlive-latexrecommended texlive-latexextra texlive-fontsrecommended texlive-fontsextra texlive-fontutils texlive-formatsextra texlive-xetex texlive-binextra texlive-pictures texlive-mathscience texlive-bibtexextra perl-yaml-tiny perl-file-homedir --needed --noconfirm
 
 # Install workspace packages
-yay -S dropbox slack-desktop --needed --noconfirm
-yay -S libreoffice-fresh --needed --noconfirm
-# yay -S onlyoffice-bin --needed --noconfirm
+yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
+# yay -S dropbox slack-desktop onlyoffice-bin --needed --noconfirm
 
 # Install media
 yay -S spotify inkscape --needed --noconfirm
 
 # Install VSC
 yay -S visual-studio-code-bin --needed --noconfirm
+
+# Install ocr libraries
+yay -S leptonica tesseract-data-osd tesseract-data-eng tesseract --needed --noconfirm
 
 # Install GitHub CLI
 yay -S github-cli --needed --noconfirm
