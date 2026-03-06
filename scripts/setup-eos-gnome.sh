@@ -6,8 +6,8 @@ mkdir ~/.venv
 mkdir ~/.tmp
 
 # Copy background, profile, and icon folders
-cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Backgrounds ~/Pictures
-cp -r $SCRIPT_DIR/../home/userprofile/Pictures/Profiles ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/backgrounds ~/Pictures
+cp -r $SCRIPT_DIR/../home/userprofile/Pictures/profiles ~/Pictures
 cp -r $SCRIPT_DIR/../home/userprofile/.local/share/icons ~/.local/share
 gtk-update-icon-cache --force ~/.local/share/icons/infinity
 

@@ -2,9 +2,8 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Copy background, profile, and icon folders
-cp -r $SCRIPT_DIR/../home/userprofile/.config/systemd ~/.config
-cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/niri ~/.config
+cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 # sudo cp -r $SCRIPT_DIR/../usr/share/xdg-desktop-portal /usr/share
 
 # Install niri and xwayland-satellite
@@ -24,5 +23,5 @@ yay -S noctalia-shell noctalia-qs --needed --noconfirm
 # yay -S archlinux-xdg-menu --needed --noconfirm
 
 # Attach swayidle service to niri session
-systemctl --user daemon-reload
-systemctl --user add-wants niri.service swayidle.service
+# systemctl --user daemon-reload
+# systemctl --user add-wants niri.service swayidle.service
