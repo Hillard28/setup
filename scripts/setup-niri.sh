@@ -4,7 +4,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # Copy background, profile, and icon folders
 cp -r $SCRIPT_DIR/../home/userprofile/.config/niri ~/.config
 cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
-# sudo cp -r $SCRIPT_DIR/../usr/share/xdg-desktop-portal /usr/share
+# sudo cp -r $SCRIPT_DIR/../home/userprofile/local/share/xdg-desktop-portal ~/.local/share
 
 # Install niri and xwayland-satellite
 yay -S niri xwayland-satellite --needed --noconfirm
