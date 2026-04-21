@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=infinity
 Comment=MacOSX style icon theme for linux.
-Inherits=Adwaita,hicolor
+Inherits=breeze,hicolor
 Example=folder
 
 # KDE/Plasma Stuff
@@ -79,4 +79,3 @@ Context=Applications
 MinSize=16
 MaxSize=512
 Type=Scalable
-
