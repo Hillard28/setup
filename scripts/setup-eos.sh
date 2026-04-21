@@ -15,7 +15,7 @@ cp -r $SCRIPT_DIR/../home/userprofile/.local/share/plasma ~/.local/share
 # Update installed packages
 yay -Syu --noconfirm
 
-# Install Adwaita, and Nerd fonts
+# Install Adwaita and Nerd fonts
 yay -S adwaita-fonts --needed --noconfirm
 # yay -S ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --needed --noconfirm
 fc-cache -f
@@ -25,7 +25,7 @@ yay -S zram-generator --needed --noconfirm
 sudo sh -c "echo '[zram0]' > /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'zram-size = ram * 2' >> /etc/systemd/zram-generator.conf"
 sudo sh -c "echo 'compression-algorithm = zstd' >> /etc/systemd/zram-generator.conf"
-sudo sh -c "echo 'vm.swappiness = 180' > /etc/sysctl.d/99-vm-zram-parameters.conf"
+sudo sh -c "echo 'vm.swappiness = 100' > /etc/sysctl.d/99-vm-zram-parameters.conf"
 # sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 # sudo sh -c "echo 'vm.watermark_scale_factor = 10' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
@@ -69,7 +69,7 @@ yay -S dropbox slack-desktop libreoffice-fresh --needed --noconfirm
 # Install media
 yay -S spotify inkscape --needed --noconfirm
 
-# Install VSC
+# Install IDE
 yay -S visual-studio-code-bin --needed --noconfirm
 
 # Install ocr libraries
