@@ -10,7 +10,7 @@ cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 yay -S niri xwayland-satellite --needed --noconfirm
 
 # Install noctalia-shell dependencies
-yay -S brightnessctl imagemagick cava cliphist wlsunset evolution-data-server --needed --noconfirm
+yay -S brightnessctl imagemagick cliphist wlsunset evolution-data-server --needed --noconfirm
 # yay -S ddcutil --needed --noconfirm
 
 # Install noctalia-shell
