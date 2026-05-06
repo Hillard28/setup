@@ -16,7 +16,7 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 },
                 "/Wallpaper/org.kde.image/General": {
-                    "Image": "file:///home/rgilland/Pictures/Backgrounds/dunes.png",
+                    "Image": "file:///home/rgilland/Pictures/Backgrounds/redsun.png",
                     "SlidePaths": "/usr/share/wallpapers/"
                 }
             },
@@ -97,11 +97,11 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
-            "height": 1.6666666666666667,
+            "height": 1.875,
             "hiding": "normal",
             "location": "top",
-            "maximumLength": 142.22222222222223,
-            "minimumLength": 142.22222222222223,
+            "maximumLength": 160,
+            "minimumLength": 160,
             "offset": 0
         },
         {
@@ -133,7 +133,7 @@ var layout = {
                             "DialogWidth": "810"
                         },
                         "/General": {
-                            "launchers": "applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:code.desktop,preferred://browser,preferred://filemanager,applications:spotify.desktop,applications:org.kde.spectacle.desktop,applications:systemsettings.desktop,applications:org.kde.plasma-systemmonitor.desktop"
+                            "launchers": "applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:code.desktop,applications:org.kde.kate.desktop,applications:spotify.desktop,applications:org.kde.spectacle.desktop,applications:systemsettings.desktop,applications:org.kde.plasma-systemmonitor.desktop"
                         }
                     },
                     "plugin": "org.kde.plasma.icontasks"
@@ -147,11 +147,11 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
-            "height": 3.5555555555555554,
+            "height": 4.5,
             "hiding": "dodgewindows",
             "location": "bottom",
-            "maximumLength": 142.22222222222223,
-            "minimumLength": 142.22222222222223,
+            "maximumLength": 160,
+            "minimumLength": 160,
             "offset": 0
         }
     ],
