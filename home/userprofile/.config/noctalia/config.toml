@@ -8,7 +8,7 @@ font_weight = 400
 margin_ends = 0
 radius = 0
 shadow = false
-start = [ "workspaces" ]
+start = [ "workspaces", "active_window" ]
 
 [location]
 auto_locate = true
