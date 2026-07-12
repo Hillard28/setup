@@ -281,7 +281,8 @@ layout {
 spawn-sh-at-startup "kbuildsycoca6 --noincremental"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "/usr/lib/pam_kwallet_init"
-spawn-at-startup "qs" "-c" "noctalia-shell"
+// spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-sh-at-startup "dolphin --daemon"
 
 hotkey-overlay {
@@ -355,6 +356,11 @@ window-rule {
     // block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="steam" title="^Friends List$"
+    default-column-width { proportion 0.25; }
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
@@ -398,7 +404,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: noctalia" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
     // Noctalia launcher
-    Mod+Slash { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+Slash { spawn-sh "noctalia msg panel-toggle launcher"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
