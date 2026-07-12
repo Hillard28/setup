@@ -13,8 +13,8 @@ yay -S niri xwayland-satellite --needed --noconfirm
 yay -S brightnessctl imagemagick cliphist wlsunset evolution-data-server --needed --noconfirm
 # yay -S ddcutil --needed --noconfirm
 
-# Install noctalia-shell
-yay -S noctalia-shell noctalia-qs --needed --noconfirm
+# Install noctalia
+yay -S noctalia --needed --noconfirm
 
 # Install swayidle
 # yay -S swayidle --needed --noconfirm

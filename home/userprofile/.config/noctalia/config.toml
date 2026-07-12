@@ -1,0 +1,78 @@
+[bar.default]
+capsule_radius = 4
+center = [ "launcher", "clock", "media" ]
+concave_edge_corners = false
+end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center" ]
+font_family = "Adwaita Sans"
+font_weight = 400
+margin_ends = 0
+radius = 0
+shadow = false
+start = [ "workspaces" ]
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 1081.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[shell]
+corner_radius_scale = 0.2500000037252903
+font_family = "Adwaita Sans"
+
+[theme]
+community_palette = "GitHub Dark"
+custom_palette = "Infinity"
+source = "custom"
+
+[wallpaper]
+directory = "/home/rgilland/Pictures/Backgrounds"
+transition = [ "fade" ]
+
+    [wallpaper.default]
+    path = "/home/rgilland/Pictures/Backgrounds/redsun.png"
+
+    [wallpaper.last]
+    path = "/home/rgilland/Pictures/Backgrounds/redsun.png"
+
+[widget.clock]
+anchor = true
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+
+[widget.tray]
+drawer = true
+
+[widget.workspaces]
+display = "none"
