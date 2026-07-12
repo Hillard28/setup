@@ -62,8 +62,15 @@ transition = [ "fade" ]
     [wallpaper.last]
     path = "/home/rgilland/Pictures/Backgrounds/redsun.png"
 
+[widget.battery]
+show_label = false
+
+[widget.brightness]
+show_label = false
+
 [widget.clock]
 anchor = true
+format = "{:%H:%M}\\n{:%m-%d-%Y}"
 
 [widget.media]
 hide_when_no_media = true
@@ -73,6 +80,9 @@ show_label = false
 
 [widget.tray]
 drawer = true
+
+[widget.volume]
+show_label = false
 
 [widget.workspaces]
 display = "none"
