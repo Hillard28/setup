@@ -10,6 +10,24 @@ radius = 0
 shadow = false
 start = [ "workspaces", "active_window" ]
 
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
 [location]
 auto_locate = true
 
@@ -66,6 +84,9 @@ widget_order = [ "lockscreen-login-box@DP-4", "lockscreen-login-box@eDP-1" ]
 [shell]
 corner_radius_scale = 0.2500000037252903
 font_family = "Adwaita Sans"
+
+    [shell.launcher]
+    sort_by_usage = false
 
     [shell.panel]
     launcher_placement = "attached"
