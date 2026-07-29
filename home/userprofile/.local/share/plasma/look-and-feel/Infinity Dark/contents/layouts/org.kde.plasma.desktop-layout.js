@@ -16,7 +16,24 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 },
                 "/Wallpaper/org.kde.image/General": {
-                    "Image": "file:///home/rgilland/Pictures/Backgrounds/redsun.png",
+                    "Image": "file:///home/rgilland/Pictures/Backgrounds/wave.PNG",
+                    "SlidePaths": "/usr/share/wallpapers/"
+                }
+            },
+            "wallpaperPlugin": "org.kde.image"
+        },
+        {
+            "applets": [
+            ],
+            "config": {
+                "/": {
+                    "formfactor": "0",
+                    "immutability": "1",
+                    "lastScreen": "1",
+                    "wallpaperplugin": "org.kde.image"
+                },
+                "/Wallpaper/org.kde.image/General": {
+                    "Image": "file:///home/rgilland/Pictures/Backgrounds/wave.PNG",
                     "SlidePaths": "/usr/share/wallpapers/"
                 }
             },
@@ -99,10 +116,12 @@ var layout = {
             },
             "height": 1.875,
             "hiding": "normal",
+            "lengthMode": "fill",
             "location": "top",
             "maximumLength": 160,
             "minimumLength": 160,
-            "offset": 0
+            "offset": 0,
+            "opacity": "adaptive"
         },
         {
             "alignment": "center",
@@ -147,12 +166,14 @@ var layout = {
                     "wallpaperplugin": "org.kde.image"
                 }
             },
-            "height": 4.5,
+            "height": 3.5,
             "hiding": "dodgewindows",
+            "lengthMode": "fit",
             "location": "bottom",
             "maximumLength": 160,
             "minimumLength": 160,
-            "offset": 0
+            "offset": 0,
+            "opacity": "adaptive"
         }
     ],
     "serializationFormatVersion": "1"
