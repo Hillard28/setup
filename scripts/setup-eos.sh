@@ -29,11 +29,11 @@ sudo sh -c "echo 'vm.swappiness = 100' > /etc/sysctl.d/99-vm-zram-parameters.con
 # sudo sh -c "echo 'vm.watermark_boost_factor = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 # sudo sh -c "echo 'vm.watermark_scale_factor = 10' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
 sudo sh -c "echo 'vm.page-cluster = 0' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
-MINIMUM=$(awk '/MemTotal/ {printf "%.0f", $2 * 0.01}' /proc/meminfo)
-CURRENT=$(sysctl vm.min_free_kbytes | awk '{print $3}')
-if (($MINIMUM > $CURRENT)); then
-    sudo sh -c "echo 'vm.min_free_kbytes = $MINIMUM' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
-fi
+# MINIMUM=$(awk '/MemTotal/ {printf "%.0f", $2 * 0.01}' /proc/meminfo)
+# CURRENT=$(sysctl vm.min_free_kbytes | awk '{print $3}')
+# if (($MINIMUM > $CURRENT)); then
+#     sudo sh -c "echo 'vm.min_free_kbytes = $MINIMUM' >> /etc/sysctl.d/99-vm-zram-parameters.conf"
+# fi
 
 # Install development libraries
 yay -S base-devel clang llvm just cmake ninja meson python-tqdm openssl zlib xz tk --needed --noconfirm

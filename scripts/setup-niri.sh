@@ -9,19 +9,12 @@ cp -r $SCRIPT_DIR/../home/userprofile/.config/noctalia ~/.config
 # Install niri and xwayland-satellite
 yay -S niri xwayland-satellite --needed --noconfirm
 
-# Install noctalia-shell dependencies
-yay -S brightnessctl imagemagick cliphist wlsunset evolution-data-server --needed --noconfirm
+# Install noctalia dependencies
+# yay -S brightnessctl imagemagick cliphist wlsunset evolution-data-server --needed --noconfirm
 # yay -S ddcutil --needed --noconfirm
 
 # Install noctalia
 yay -S noctalia --needed --noconfirm
 
-# Install swayidle
-# yay -S swayidle --needed --noconfirm
-
 # Install archlinux-xdg-menu for Dolphin compatability
 # yay -S archlinux-xdg-menu --needed --noconfirm
-
-# Attach swayidle service to niri session
-# systemctl --user daemon-reload
-# systemctl --user add-wants niri.service swayidle.service
