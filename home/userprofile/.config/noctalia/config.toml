@@ -42,6 +42,9 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 [location]
 auto_locate = true
 
+[lockscreen]
+transition = [ "fade" ]
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
