@@ -44,6 +44,7 @@ auto_locate = true
 
 [lockscreen]
 transition = [ "fade" ]
+transition_duration = 500
 
 [lockscreen_widgets]
 enabled = false
@@ -196,6 +197,7 @@ source = "custom"
 [wallpaper]
 directory = "/home/rgilland/Pictures/Backgrounds"
 transition = [ "fade" ]
+transition_duration = 500
 
     [wallpaper.default]
     path = "/home/rgilland/Pictures/Backgrounds/wave.PNG"
@@ -204,6 +206,9 @@ transition = [ "fade" ]
     path = "/home/rgilland/Pictures/Backgrounds/wave.PNG"
 
     [wallpaper.monitors.DP-4]
+    path = "/home/rgilland/Pictures/Backgrounds/wave.PNG"
+
+    [wallpaper.monitors.DP-5]
     path = "/home/rgilland/Pictures/Backgrounds/wave.PNG"
 
 [widget.battery]
